@@ -7,7 +7,7 @@ This document outlines a step-by-step guide for setting up a dedicated, *mostly*
 # The Security Risk tldr; 
 1. If the OpenClaw system becomes compromised, any data on that system should also be considered compromised. Files, passwords, api keys, etc. *ie. don't store sensitive data on the OpenClaw system*
 2. If the OpenClaw system becomes compromised and it has access to anything else on the local network, that compromise could potentially spread across the local network to additional devices and data stores.
-### - Yes - the OpenClaw system can still become compromised by things outside of your conrol. Especially since OpenClaw uses npm packages, and supply chain attacks could unknowing occure and infect your system through compromised package updates. 
+### ⚠️ Yes, the OpenClaw system can still become compromised by things outside of your conrol. Especially since OpenClaw uses npm packages, and supply chain attacks could unknowing occure and infect your system through compromised package updates. 
   - npm supply chain attacks have been in the Cyber Security news lately. Examples:
   - one ..
   - two .. 
@@ -19,19 +19,19 @@ Before proceeding it is important to isolate the OpenClaw system from the rest o
 
 ### Put the sytem on its own dedicated and isolated VLAN. *VLANs are outside the scope of this guide - google VLAN* 
 
-## 2. Admin User Configuration 
+## 2. 👷‍♂️ Admin User Configuration 
 - **Make an Admin User:** This account will be used to run admin tasks only, and NOT LLMs. 
   - Set a static (fixed) IP address.    
   - Disable rotating MAC if using a DHCP lease and WiFi *(Settings > Network > WiFi > SSID's (3 dots) > Network Settings > Private WiFi address > Set to: "Fixed")*
   - Set Screen timeout *(Settings > Lock Screen)*
   - Set Energy settings *(Settings > Energy: -- turn low power mode off -- prevent automatic sleeping when the display is off should be turned on -- Start up automatically after a power failure should be turned on)*
 
-## 3. Allow Remote Access
+## 3. 🛰️ Allow Remote Access
 - **Enable **SSH:** *(Settings > General > Sharing > Remote Login: toggle on)*
   - Grant **Full Disk Access** to Terminal/SSH.
   - Setup SSH key pairs for the admin user.
 
-## 4. LLM / AI Agent User Configuration
+## 4. 🤖 LLM / AI Agent User Configuration
 - **Create a secondary User Account** with (temporary) admin privileges. 
   - *Note: Admin rights will be removed after tool installation for security.*
 - Log into the new account; skip Apple ID sign-in for security/privacy.
