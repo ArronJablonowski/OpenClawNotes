@@ -164,3 +164,15 @@ As you go through the installer script:
   - Remove Admin (settings > Users & Groups > *click 'i' next to LLM/AI user's name* and toggle off the "allow this user to administer this computer"
   - Reboot the system so these changes take effect.
   - Verify the LLM/AI user no longer has Admin privileges. 
+
+## 📜 Command Quick References 
+OpenClaw:
+- openclaw onboard 
+- openclaw hooks list 
+- openclaw hooks enable <name>
+- openclaw hooks disable <name>
+
+ollama: 
+- ollama pull <model_name>
+- ollama run <model_name>
+- ollama rm <model_name>
