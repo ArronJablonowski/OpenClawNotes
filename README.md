@@ -79,3 +79,26 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 source $HOME/.local/bin/env sh, bash, zsh
 sudo uvx fluidtop
 ```
+
+### Modify the Terminal's Prompt 
+This will be a visual que to help identify when you're in the LLM/AI user's terminal, and help prevent entering commands into the wrong terminal window. 
+```
+nano ~/.zshrc
+```
+- Add the following to the end of the .zshrc file:
+```
+# This function prepends the 'Brain' emoji (🧠) to the prompt for security awareness.
+preprompt_brain() {
+    # \e[33m is the ANSI code for yellow/amber, making it noticeable.
+    echo -e "\e[33m🧠\e[0m " 
+}
+# Hook the function into the Zsh prompt drawing routine.
+precmd() {
+    preprompt_brain
+}
+```
+- Reload the zshrc file
+```
+source ~/.zshrc
+```
+
