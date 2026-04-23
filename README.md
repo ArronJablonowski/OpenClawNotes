@@ -17,7 +17,7 @@ This document outlines a step-by-step guide for setting up a dedicated, *mostly*
 ## 1. 📡 Network Isolation 
 Before proceeding it is important to isolate the OpenClaw system from the rest of the LAN (local area network). *see The Security Risks above*
 
-### Put the sytem on its own dedicated and isolated VLAN. *VLANs are outside the scope of this guide - google VLAN* 
+### Put the system on its own dedicated and isolated VLAN. *VLANs are outside the scope of this guide - google VLAN* 
 
 ## 2. 👷‍♂️ Admin User Configuration 
 - **Make an Admin User:** This account will be used to run admin tasks only, and NOT LLMs. 
