@@ -142,7 +142,7 @@ Add commands to the sudoer's file so your secondary LLM/AI user will be allowed 
 ```
 sudo visudo
 ```
-- Add the following to the end of the file, and replace 'lobster_user' with your LLM/AI user's name: 
+- Add the following to the end of the file, and replace *'lobster_user'* with your LLM/AI user's name: 
 ```
 lobster_user ALL=(ALL) NOPASSWD: /usr/bin/powermetrics
 lobster_user ALL=(ALL) NOPASSWD: /opt/homebrew/bin/asitop
