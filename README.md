@@ -12,7 +12,7 @@ This document outlines a step-by-step guide for setting up a dedicated, *mostly*
   - one ..
   - two .. 
 
-# My OpenClaw setup recommendations for securing an AI Lab 🧪 Environment 
+# 🧪 My OpenClaw setup recommendations for securing an AI Lab Environment 
 
 ## 1. 📡 Network Isolation 
 Before proceeding it is important to isolate the OpenClaw system from the rest of the LAN (local area network). *see The Security Risks above*
