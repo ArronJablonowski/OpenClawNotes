@@ -3,7 +3,7 @@
 🚧 🚧 🚧 Under Construction 🚧 🚧 🚧
 *in beta* 
 
-This document outlines a step-by-step guide for setting up a dedicated, *mostly* secure, OpenClaw installation locally on Apple M series systems. 
+This document outlines a step-by-step guide for setting up a dedicated, *mostly* secure, OpenClaw installation locally on an Apple M series system. 
 
  🎯 The Objective: I developed this guide for two primary reasons:
 - First, to personally explore OpenClaw as an AI Agent. Given its reputation as a "Security Nightmare" according to platforms like Google Gemini and some cybersecurity experts.
