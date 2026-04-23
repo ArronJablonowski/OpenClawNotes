@@ -156,3 +156,8 @@ curl -fsSL https://openclaw.ai/install.sh | bash
 As you go through the installer script: 
 - keep gemma4 as default
 - Enable 'command-logger' & 'session-memory'
+
+## 5. 👷‍♂️ Log out of your LLM/AI user and log into your Admin User
+- **Remove Admin/Sudo from the LLM/AI User:** Now that everything is installed and running properly under the LLM/AI user, we will revoke the user's admin/sudo access. 
+  - Remove Admin (settings > Users & Groups > *click 'i' next to LLM/AI user's name* and toggle off the "allow this user to administer this computer"
+  - Reboot the system so these changes take effect. 
