@@ -35,7 +35,7 @@ Before proceeding it is important to isolate the OpenClaw system from the rest o
   - Grant **Full Disk Access** to Terminal/SSH.
   - Setup SSH key pairs for the admin user.
 
-## 4. 🤖 LLM / AI Agent User Configuration
+## 4. 🤖 LLM / AI User Configuration
 - **Create a secondary User Account** with (temporary) admin privileges. 
   - *Note: Admin rights will be removed after tool installation for security.*
 - Now log into the new secondary account; skip Apple ID sign-in for security/privacy.
