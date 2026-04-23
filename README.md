@@ -102,3 +102,15 @@ precmd() {
 source ~/.zshrc
 ```
 
+### Harden ssh to only allow keypair auth 
+Ensure you've already setup keypairs for both users. 
+```
+sudo nano /etc/ssh/sshd_config.d/00-disable-passwords.conf
+```
+- Add the following to the 00-disable-passwords.conf file: 
+```
+PasswordAuthentication no
+PubkeyAuthentication yes
+ChallengeResponseAuthentication no
+PermitEmptyPasswords no
+```
