@@ -39,19 +39,19 @@ Before proceeding it is important to isolate the OpenClaw system from the rest o
 - Change the **Desktop Background** to a distinct color/image as a visual cue for AI-specific environment.
 - Pin the terminal to the dock.
 
-### Install Oh My Zsh - Shell Extension 
+### 4a. Install Oh My Zsh - Shell Extension 
 ```sh
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-### Install Homebrew Package Manager 
+### 4b. Install Homebrew Package Manager 
 ```bash
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-### Install Brew Utilities
+### 4c. Install Brew Utilities
 ```zsh
 brew install git node htop tmux
 brew install ollama
@@ -61,26 +61,26 @@ brew install asitop
 brew install repomix
 ```
 
-### Install Stats to Monitor System Temps
+### 4d. Install Stats to Monitor System Temps
 ```zsh
 mkdir ~/Applications && brew install --cask --appdir=~/Applications stats
 ```
 - *Open Stats in the GUI. {config}*
 
-### Install Mac Fan Control 
+### 4e. Install Mac Fan Control 
 ```zsh
 brew install --cask macs-fan-control
 ```
 - *Open Mac Fac Control in the GUI. {config}*
 
-### Install 'uv' and fluidtop to Monitor Performance
+### 4f. Install 'uv' and fluidtop to Monitor Performance
 ```zsh 
 curl -LsSf https://astral.sh/uv/install.sh | sh
 source $HOME/.local/bin/env sh, bash, zsh
 sudo uvx fluidtop
 ```
 
-### Modify the Terminal's Prompt 
+### 4g. Modify the Terminal's Prompt 
 This will be a visual que to help identify when you're in the LLM/AI user's terminal, and help prevent entering commands into the wrong terminal window. 
 ```
 nano ~/.zshrc
@@ -102,7 +102,7 @@ precmd() {
 source ~/.zshrc
 ```
 
-### Harden ssh to only allow keypair auth 
+### 4h. Harden ssh to only allow keypair auth 
 Ensure you've already setup keypairs for both users. 
 ```
 sudo nano /etc/ssh/sshd_config.d/00-disable-passwords.conf
@@ -114,7 +114,7 @@ PubkeyAuthentication yes
 ChallengeResponseAuthentication no
 PermitEmptyPasswords no
 ```
-### Modify tmux config for ez mode (like scrolling with your mouse or trackpad) 
+### 4i. Modify tmux config for ez mode (like scrolling with your mouse or trackpad) 
 ```
 nano ~/.tmux.conf
 ```
@@ -131,7 +131,7 @@ setw -g pane-base-index 1
 set-option -g allow-rename off
 ```
 
-### sudo visudo 
+### 4j. sudo visudo 
 Add commands to the sudoer's file so your secondary LLM/AI user will be allowed to run some commands as root. 
 - vi commands: 
   - press 'i'              *enter insert mode*
@@ -149,7 +149,7 @@ lobster_user ALL=(ALL) NOPASSWD: /opt/homebrew/bin/asitop
 lobster_user ALL=(ALL) NOPASSWD: /Users/aj_lab/.local/bin/uvx fluidtop
 ```
 
-### Install 🦞 OpenClaw 🦞 
+### 4k. Install 🦞 OpenClaw 🦞 
 ```
 curl -fsSL https://openclaw.ai/install.sh | bash
 ```
