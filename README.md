@@ -134,9 +134,9 @@ set-option -g allow-rename off
 ### sudo visudo 
 Add commands to the sudoer's file so your secondary LLM/AI user will be allowed to run some commands as root. 
 - lookup 'vi' commands prior to running the following, or you may get stuck inside of vi.
-  - press 'i' to enter insert mode
-  - press {esc} : q
-  - press {esc} : wq
+  - press 'i'            # to enter insert mode
+  - press {esc} : q      # to quit vi, without writing changes to the file
+  - press {esc} : wq     # to write the changes, and then quit vi
 ```
 sudo visudo
 ```
