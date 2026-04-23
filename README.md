@@ -183,6 +183,7 @@ Common ollama commands:
 - ollama run <model_name>
 - ollama rm <model_name>
 Ollama stores models in a hidden folder ```~/.ollama/models```
+
 repomix: 
 - cd into repo root and run 'repomix' - this will output a file to that can be fed to AI models
 ```
