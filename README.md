@@ -36,6 +36,7 @@ Before proceeding it is important to isolate the OpenClaw system from the rest o
   - *Note: Admin rights will be removed after tool installation for security.*
 - Log into the new account; skip Apple ID sign-in for security/privacy.
 - Change the **Desktop Background** to a distinct color/image as a visual cue for AI-specific environment.
+- Pin the terminal to the dock.
 
 ### Install Oh My Zsh - Shell Extension 
 ```zsh
