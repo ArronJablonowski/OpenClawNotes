@@ -39,15 +39,15 @@ Before proceeding it is important to isolate the OpenClaw system from the rest o
 - Pin the terminal to the dock.
 
 ### Install Oh My Zsh - Shell Extension 
-```zsh
+```sh
 # Install Oh My Zsh
-sh -c "$(curl -fsSL [https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh](https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh))"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 ### Install Homebrew Package Manager 
-```zsh
+```bash
 # Install Homebrew
-/bin/bash -c "$(curl -fsSL [https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh](https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh))"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 ### Install Brew Utilities
