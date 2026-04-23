@@ -1,6 +1,7 @@
 # 🦞 OpenClaw 🦞 AI Lab Setup & Hardening Guide for Apple Silicon 🖥️
 
 🚧 🚧 🚧 Under Construction 🚧 🚧 🚧
+*in beta* 
 
 This document outlines a step-by-step guide for setting up a dedicated, *mostly* secure, OpenClaw installation locally on Apple M series systems. 
 
