@@ -22,7 +22,7 @@ Before proceeding it is important to isolate the OpenClaw system from the rest o
 ## 2. 👷‍♂️ Admin User Configuration 
 - **Make an Admin User:** This account will be used to run admin tasks only, and NOT LLMs. 
   - Set a static (fixed) IP address.    
-  - Disable rotating MAC if using a DHCP lease and WiFi *(Settings > Network > WiFi > SSID's (3 dots) > Network Settings > Private WiFi address > Set to: "Fixed")*
+  - Disable rotating MAC if using a DHCP lease and WiFi *(Settings > Network > WiFi > SSID's (...) > Network Settings > Private WiFi address > Set to: "Fixed")*
   - Set Screen timeout *(Settings > Lock Screen)*
   - Set Energy settings *(Settings > Energy: -- turn low power mode off -- prevent automatic sleeping when the display is off should be turned on -- Start up automatically after a power failure should be turned on)*
 
