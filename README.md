@@ -34,7 +34,8 @@ Before proceeding it is important to isolate the OpenClaw system from the rest o
 ## 4. 🤖 LLM / AI Agent User Configuration
 - **Create a secondary User Account** with (temporary) admin privileges. 
   - *Note: Admin rights will be removed after tool installation for security.*
-- Log into the new account; skip Apple ID sign-in for security/privacy.
+- Now log into the new secondary account; skip Apple ID sign-in for security/privacy.
+  - *Note: The following installs and commands will happen under this secondary account.*
 - Change the **Desktop Background** to a distinct color/image as a visual cue for AI-specific environment.
 - Pin the terminal to the dock.
 
