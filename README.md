@@ -1,5 +1,6 @@
 # 🦞 OpenClaw 🦞 AI Setup & Hardening Guide for Apple Silicon 🖥️
 🚧 🚧 🚧 Under Construction 🚧 🚧 🚧
+
 This document outlines the step-by-step guide for setting up a dedicated, secure, and highly instrumented development environment optimized for AI tooling.
 
 ## 1. 🛠️ Hardware & OS Preparation
