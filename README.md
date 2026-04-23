@@ -21,7 +21,7 @@ Before proceeding it is important to isolate the OpenClaw system from the rest o
 
 ### Put the system on its own dedicated and isolated VLAN. *VLANs are outside the scope of this guide - google VLAN* 
 
-## 2. 👷‍♂️ Admin User Configuration 
+## 2. 🧑‍💻 Admin User Configuration 
 - **Make an Admin User:** This account will be used to run admin tasks only, and NOT LLMs. 
   - Set a static (fixed) IP address.    
   - Disable rotating MAC if using a DHCP lease and WiFi *(Settings > Network > WiFi > SSID's (...) > Network Settings > Private WiFi address > Set to: "Fixed")*
@@ -159,7 +159,7 @@ As you go through the installer script:
 - keep gemma4 as default
 - Enable 'command-logger' & 'session-memory'
 
-## 5. 👷‍♂️ Log out of your LLM/AI user and log into your Admin User
+## 5. 🧑‍💻 Log out of your LLM/AI user and log into your Admin User
 - **Remove Admin/Sudo from the LLM/AI User:** Now that everything is installed and running properly under the LLM/AI user, we will revoke the user's admin/sudo access. 
   - Remove Admin (settings > Users & Groups > *click 'i' next to LLM/AI user's name* and toggle off the "allow this user to administer this computer"
   - Reboot the system so these changes take effect.
