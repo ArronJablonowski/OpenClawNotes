@@ -3,7 +3,7 @@
 This document outlines the step-by-step guide for setting up a dedicated, secure, and highly instrumented development environment optimized for AI tooling.
 
 ## 1. 🛠️ Hardware & OS Preparation
-Before installing AI tools, the host OS must be Updated, Hardened, and Configured for high-availability.
+Before installing AI tools, the host OS must be Updated, Hardened, and Configured to be Secure.
 
 ### System Settings
 - **Identity:** Set up an administrator account via the macOS UI.
