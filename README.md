@@ -73,8 +73,7 @@ brew install --cask macs-fan-control
 
 ### Install 'uv' and fluidtop 
 ```zsh 
-    - install fluidtop 
-        -- curl -LsSf https://astral.sh/uv/install.sh | sh
-        -- source $HOME/.local/bin/env sh, bash, zsh
-        -- sudo uvx fluidtop
+curl -LsSf https://astral.sh/uv/install.sh | sh
+source $HOME/.local/bin/env sh, bash, zsh
+sudo uvx fluidtop
 ```
