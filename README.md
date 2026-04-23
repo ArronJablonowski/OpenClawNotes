@@ -1,56 +1,78 @@
-# 🦞 OpenClaw 🦞 AI Setup & Hardening Guide for Apple Silicon 🖥️
+# 🦞 OpenClaw 🦞 AI Lab Setup & Hardening Guide for Apple Silicon 🖥️
+
 🚧 🚧 🚧 Under Construction 🚧 🚧 🚧
 
-This document outlines the step-by-step guide for setting up a dedicated, secure, and highly instrumented development environment optimized for AI tooling.
+This document outlines a step-by-step guide for setting up a dedicated, *mostly* secure, OpenClaw installation locally on Apple M series systems. 
 
-## 1. 🛠️ Hardware & OS Preparation
-Before installing AI tools, the host OS must be Updated, Hardened, and Configured to be Secure.
+# The Security Risk tldr; 
+1. If the system becomes compromised, any data on that system should be also be considered compromised. Files, passwords, api keys, etc. *ie. don't store sensitive data on this system*
+2. If the system becomes compromised and it has access to anything else on the local network, that compromise could potentially spread across the local network to additional devices and data stores.
+## - Yes - the system can still become compromised by things outside of your conrol. Especially since OpenClaw uses npm packages, and supply chain attacks could unknowing occure and infect your system through a compromised package update. 
+  - npm supply chain attacks have been in the Cyber Security news lately. Examples:
+  - one ..
+  - two .. 
 
-### System Settings
-- **Identity:** Set up an administrator account via the macOS UI.
-  - Pin **Terminal** to the dock.
-  - Disable rotating MAC if using DHCP lease
-  - Set Screen timeout (Settings > Lock Screen)
-  - Settings > Energy >
-    -- prevent automatic sleeping when the display is off
-    -- Start up automatically after a power failure
+# My OpenClaw setup recommendations for securing an AI Lab 🧪 Environment 
 
-- **Networking:** 
-  - Set a **Static IP** for the machine.
-  - Disable **Rotating MAC Addresses** if using a DHCP lease.
-  - Set additional Wi-Fi networks to **Manual Join** only.
+## 1. 📡 Network Isolation 
+Before proceeding it is important to isolate the OpenClaw system from the rest of the LAN (local area network). *see The Security Risks above*
 
-- **Display & Security:**
-  - **Screen Timeout:** Set via *Settings > Lock Screen*.
-  - **OS Updates:** Run all pending updates and reboot.
+### Put the sytem on its own dedicated and isolated VLAN. *VLANs are outside the scope of this guide - google VLAN* 
 
-- **Power Management:** - *Settings > Energy*: 
-    - Enable **Prevent automatic sleeping when the display is off**.
-    - Enable **Start up automatically after a power failure**.
+## 2. Admin User Configuration 
+- **Make an Admin User:** This account will be used to run admin tasks only, and NOT LLMs. 
+  - Set a static (fixed) IP address.    
+  - Disable rotating MAC if using a DHCP lease and WiFi *(Settings > Network > WiFi > SSID's (3 dots) > Network Settings > Private WiFi address > Set to: "Fixed")*
+  - Set Screen timeout *(Settings > Lock Screen)*
+  - Set Energy settings *(Settings > Energy: -- turn low power mode off -- prevent automatic sleeping when the display is off should be turned on -- Start up automatically after a power failure should be turned on)*
 
-- **Remote Access:** - Enable **SSH** in Sharing.
+## 3. Allow Remote Access
+- **Enable **SSH:** *(Settings > General > Sharing > Remote Login: toggle on)*
   - Grant **Full Disk Access** to Terminal/SSH.
-  - Setup SSH key pairs for each user account.
+  - Setup SSH key pairs for the admin user.
 
-### User Configuration
-- Create a secondary **User Account** with Admin privileges.
+## 4. LLM / AI Agent User Configuration
+- **Create a secondary User Account** with (temporary) admin privileges. 
   - *Note: Admin rights will be removed after tool installation for security.*
 - Log into the new account; skip Apple ID sign-in for security/privacy.
-- Change the **Desktop Background** to a distinct color/image (visual cue for AI-specific environment).
+- Change the **Desktop Background** to a distinct color/image as a visual cue for AI-specific environment.
 
----
-
-## 2. 📦 Core Toolbelt Installation
-Standardized environment setup using Homebrew and Oh My Zsh.
-
-### Shell & Package Managers
-```bash
+### Install Oh My Zsh - Shell Extension 
+```zsh
 # Install Oh My Zsh
 sh -c "$(curl -fsSL [https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh](https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh))"
+```
 
+### Install Homebrew Package Manager 
+```zsh
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL [https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh](https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh))"
+```
 
-# Core Utilities
+### Install Brew Utilities
+```zsh
 brew install git node htop tmux
+brew install ollama
+brew services start ollama
+brew install --cask obsidian
+brew install asitop
+brew install repomix
+```
+
+### Install Stats to Monitor System Temps
+```zsh
+mkdir ~/Applications && brew install --cask --appdir=~/Applications stats
+```
+
+### Install Mac Fan Control 
+```zsh
+brew install --cask macs-fan-control
+```
+
+### Install 'uv' and fluidtop 
+```zsh 
+    - install fluidtop 
+        -- curl -LsSf https://astral.sh/uv/install.sh | sh
+        -- source $HOME/.local/bin/env sh, bash, zsh
+        -- sudo uvx fluidtop
 ```
