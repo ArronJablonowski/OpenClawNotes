@@ -5,7 +5,7 @@
 
 The Objective: I developed this guide for two primary reasons:
 - First, to personally explore OpenClaw as an AI Agent. Given its reputation as a "Security Nightmare" according to platforms like Google Gemini and some cybersecurity experts.
-- Second, during my research into OpenClaw, I noted the prevalence of generic security advice lacking depth. Consequently, I aimed to create a hands-on hardening guide that establishes higher security standards and best practices to address common vulnerabilities and rectify conceptual misunderstandings related to security.
+- Second, during my research into OpenClaw, I noted the prevalence of poor and generic security advice lacking depth. Consequently, I aimed to create a hands-on hardening guide that establishes higher security standards and best practices to address common vulnerabilities and rectify conceptual misunderstandings related to security.
 
 ##
 
