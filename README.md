@@ -3,6 +3,12 @@
 🚧 🚧 🚧 Under Construction 🚧 🚧 🚧
 *in beta* 
 
+The Objective: I developed this guide for two primary reasons:
+- First, to personally explore OpenClaw as an AI Agent. Given its reputation as a "Security Nightmare" according to platforms like Google Gemini and other cybersecurity experts.
+- Second, during my research into OpenClaw, I noted the prevalence of generic security advice lacking depth. Consequently, I aimed to create a hands-on hardening guide that establishes higher security standards and best practices to address common vulnerabilities and rectify conceptual misunderstandings related to security.
+
+##
+
 This document outlines a step-by-step guide for setting up a dedicated, *mostly* secure, OpenClaw installation locally on Apple M series systems. 
 
 # 🚨 The Security Risk tldr; 
@@ -11,7 +17,7 @@ This document outlines a step-by-step guide for setting up a dedicated, *mostly*
 **🕸️ Potential Spread:** If OpenClaw is compromised and given network access, the attack could potentially spread to other devices and data stores on the local network; if the system has not been properly segmented from the rest of the network.
 
 ### ⚠️ Supply Chain Vulnerabilities
-The biggest immediate risk to your OpenClaw is the supply chain. Since OpenClaw relies on `npm` packages, a compromised dependency could unknowingly infect your system through package updates.
+The biggest immediate risk to your OpenClaw is the supply chain. Since OpenClaw relies on community developed `skills` and `npm` packages, a compromised `skill` or `npm` dependency could unknowingly infect your system through package updates.
 *   *Always audit dependencies.*
 *   *Never trust a single source.*
 
