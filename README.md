@@ -165,14 +165,24 @@ As you go through the installer script:
   - Reboot the system so these changes take effect.
   - Verify the LLM/AI user no longer has Admin privileges. 
 
-## 📜 Command Quick References 
-OpenClaw:
+## 📜 Quick Reference 
+- OpenClaw Gateway URL: 127.0.0.1:18789 
+- ollama base URL: http://127.0.0.1:11434
+
+Common OpenClaw commands:
 - openclaw onboard 
 - openclaw hooks list 
 - openclaw hooks enable <name>
 - openclaw hooks disable <name>
 
-ollama: 
+Common ollama commands: 
 - ollama pull <model_name>
 - ollama run <model_name>
 - ollama rm <model_name>
+
+repomix: 
+- cd into repo root and run 'repomix' - this will output a file to that can be fed to AI models
+```
+# Example Usage
+cat repomix-output.xml | ollama run qwen2.5-coder:7b "I have attached my repository in XML format. Please analyze the logic flow between the main entry script and the sub-modules."
+````
