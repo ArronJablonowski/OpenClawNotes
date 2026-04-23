@@ -165,6 +165,34 @@ As you go through the installer script:
   - Reboot the system so these changes take effect.
   - Verify the LLM/AI user no longer has Admin privileges. 
 
+## 🔒 6. SOC-Grade Hardening of OpenClaw (Zero-Trust Deployment)
+
+As a security professional, you must treat an autonomous agent as **untrusted code execution**. By default, OpenClaw has the same permissions as your `LLM/AI` user. If the agent is "prompt injected" while reading a malicious file or webpage, it could trick the system into running malicious commands or compromise the system. 
+
+### **Implement "Least Privilege" Command Filtering**
+OpenClaw’s `exec` tool is a powerful vector. Restrict it to a "Default Deny" posture by configuring an allowlist of approved binaries.
+
+1. Edit your tool policy: `nano ~/.openclaw/config.yaml`
+2. Update the `tools.exec` section:
+```yaml
+tools:
+  exec:
+    security: "allowlist" # Changes from 'full' to 'allowlist'
+    ask: "on-miss"       # Prompt you if it tries a command not on the list
+    allow:
+      - "git"
+      - "repomix"
+      - "ls"
+      - "cat"
+      - "python3"
+    deny:
+      - "brew"      # Never allow the agent to install software
+      - "sudo"      # Absolute restriction 
+      - "curl"      # Prevent direct exfiltration via CLI
+      - "wget"      # Prevent direct exfiltration via CLI
+```
+Modify the allow and deny list as needed. 
+
 ## 📜 Quick Reference 
 - OpenClaw Gateway: 127.0.0.1:18789 
 - ollama base URL: 127.0.0.1:11434
