@@ -3,13 +3,13 @@
 🚧 🚧 🚧 Under Construction 🚧 🚧 🚧
 *in beta* 
 
+This document outlines a step-by-step guide for setting up a dedicated, *mostly* secure, OpenClaw installation locally on Apple M series systems. 
+
  🎯 The Objective: I developed this guide for two primary reasons:
 - First, to personally explore OpenClaw as an AI Agent. Given its reputation as a "Security Nightmare" according to platforms like Google Gemini and some cybersecurity experts.
 - Second, during my research into OpenClaw, I noted the prevalence of poor and generic security advice lacking depth. Consequently, I aimed to create a hands-on hardening guide that establishes higher security standards and best practices to address common vulnerabilities and rectify conceptual misunderstandings related to security.
 
 ##
-
-This document outlines a step-by-step guide for setting up a dedicated, *mostly* secure, OpenClaw installation locally on Apple M series systems. 
 
 # 🚨 The Security Risk tldr; 
 **🛑 PRIMARY WARNING:** If the OpenClaw system is compromised, **all data on that system must be considered compromised.** This includes local files, passwords, API keys, etc. **Do not store sensitive data on the OpenClaw system, and do not use your daily driver machine to run OpenClaw.**
