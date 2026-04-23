@@ -169,7 +169,7 @@ As you go through the installer script:
 
 ## 6. Tell OpenClaw to Run a Security Audit
 ```bash
-openclaw security audit
+openclaw security audit --deep
 ```
 
 If you want to fix any issues that are found by the audit:
@@ -212,6 +212,7 @@ Modify the allow and deny list as needed.
 Common OpenClaw commands:
 - openclaw onboard
 - openclaw security audit
+- openclaw security audit --deep
 - openclaw security audit --fix
 - openclaw update status
 - openclaw hooks list 
