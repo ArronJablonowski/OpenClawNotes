@@ -160,4 +160,5 @@ As you go through the installer script:
 ## 5. 👷‍♂️ Log out of your LLM/AI user and log into your Admin User
 - **Remove Admin/Sudo from the LLM/AI User:** Now that everything is installed and running properly under the LLM/AI user, we will revoke the user's admin/sudo access. 
   - Remove Admin (settings > Users & Groups > *click 'i' next to LLM/AI user's name* and toggle off the "allow this user to administer this computer"
-  - Reboot the system so these changes take effect. 
+  - Reboot the system so these changes take effect.
+  - Verify the LLM/AI user no longer has Admin privileges. 
