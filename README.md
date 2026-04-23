@@ -130,3 +130,24 @@ setw -g pane-base-index 1
 # Don't rename windows automatically (keep your labels)
 set-option -g allow-rename off
 ```
+
+### sudo visudo 
+Add commands to the sudoer's file so your secondary LLM/AI user will be allowed to run some commands as root. 
+- lookup 'vi' commands prior to running the following, or you may get stuck inside of vi. 
+```
+sudo visudo
+```
+- Add the following to the end of the file, and replace 'lobster_user' with your LLM/AI user's name: 
+```
+lobster_user ALL=(ALL) NOPASSWD: /usr/bin/powermetrics
+lobster_user ALL=(ALL) NOPASSWD: /opt/homebrew/bin/asitop
+lobster_user ALL=(ALL) NOPASSWD: /Users/aj_lab/.local/bin/uvx fluidtop
+```
+
+### Install 🦞 OpenClaw 🦞 
+```
+curl -fsSL https://openclaw.ai/install.sh | bash
+```
+As you go through the installer script: 
+- keep gemma4 as default
+- Enable 'command-logger' & 'session-memory'
