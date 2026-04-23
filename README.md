@@ -210,10 +210,14 @@ Modify the allow and deny list as needed.
 - ollama base URL: 127.0.0.1:11434
 
 Common OpenClaw commands:
-- openclaw onboard 
+- openclaw onboard
+- openclaw security audit
+- openclaw security audit --fix
+- openclaw update status
 - openclaw hooks list 
 - openclaw hooks enable <name>
 - openclaw hooks disable <name>
+- openclaw --help
 OpenClaw stores its files in a hidden folde ```~/.openclaw```
 
 Common ollama commands: 
