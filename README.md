@@ -45,7 +45,7 @@ Before proceeding it is important to isolate the OpenClaw system from the rest o
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-### 4b. Install Homebrew Package Manager 
+### 4b. Install Homebrew - Package Manager 
 ```bash
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
