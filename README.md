@@ -14,7 +14,7 @@ The biggest immediate risk to your OpenClaw is the supply chain. Since OpenClaw 
 *   *Always audit dependencies.*
 *   *Never trust a single source.*
 
-### ⚠️ SECRETS WARNING: OpenClaw stores API tokens and session keys in plaintext within `~/.openclaw/credentials/`. Never include these in your Git commits or share your `SOUL.md` file if it contains sensitive environmental details.
+### 🔑 SECRETS WARNING: OpenClaw stores API tokens and session keys in plaintext within `~/.openclaw/credentials/`. Never include these in your Git commits or share your `SOUL.md` file if it contains sensitive environmental details.
 
 # 🧪 My OpenClaw setup recommendations for securing an AI Lab Environment 
 
