@@ -65,13 +65,13 @@ brew install repomix
 ```zsh
 mkdir ~/Applications && brew install --cask --appdir=~/Applications stats
 ```
-Open Stats in the GUI. {config}
+- *Open Stats in the GUI. {config}*
 
 ### Install Mac Fan Control 
 ```zsh
 brew install --cask macs-fan-control
 ```
-Open Mac Fac Control in the GUI. {config}
+- *Open Mac Fac Control in the GUI. {config}*
 
 ### Install 'uv' and fluidtop to Monitor Performance
 ```zsh 
