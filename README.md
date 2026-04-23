@@ -114,3 +114,19 @@ PubkeyAuthentication yes
 ChallengeResponseAuthentication no
 PermitEmptyPasswords no
 ```
+### Modify tmux config for ez mode (like scrolling with your mouse or trackpad) 
+```
+nano ~/.tmux.conf
+```
+- Add the following to the .tmux file:
+```
+# Enable mouse support (clicking and scrolling)
+set -g mouse on
+
+# Start window and pane numbering at 1 (instead of 0)
+set -g base-index 1
+setw -g pane-base-index 1
+
+# Don't rename windows automatically (keep your labels)
+set-option -g allow-rename off
+```
