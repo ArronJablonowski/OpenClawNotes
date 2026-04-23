@@ -167,7 +167,17 @@ As you go through the installer script:
   - Reboot the system so these changes take effect.
   - Verify the LLM/AI user no longer has Admin privileges. 
 
-## 🔒 6. SOC-Grade Hardening of OpenClaw (Zero-Trust Deployment)
+## 6. Tell OpenClaw to Run a Security Audit
+```bash
+openclaw security audit
+```
+
+If you want to fix any issues that are found by the audit:
+```bash
+openclaw security audit --fix 
+```
+
+## 🔒 7. SOC-Grade Hardening of OpenClaw (Zero-Trust Deployment)
 
 As a security professional, you must treat an autonomous agent as **untrusted code execution**. By default, OpenClaw has the same permissions as your `LLM/AI` user. If the agent is "prompt injected" while reading a malicious file or webpage, it could trick the system into running malicious commands or compromise the system. 
 
