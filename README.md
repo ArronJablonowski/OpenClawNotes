@@ -27,7 +27,7 @@ Before proceeding it is important to isolate the OpenClaw system from the rest o
   - Set Energy settings *(Settings > Energy: -- turn low power mode off -- prevent automatic sleeping when the display is off should be turned on -- Start up automatically after a power failure should be turned on)*
 
 ## 3. 🛰️ Allow Remote Access
-- **Enable **SSH:** *(Settings > General > Sharing > Remote Login: toggle on)*
+- **Enable SSH** *(Settings > General > Sharing > Remote Login: toggle on)*
   - Grant **Full Disk Access** to Terminal/SSH.
   - Setup SSH key pairs for the admin user.
 
