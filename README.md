@@ -174,15 +174,28 @@ Common OpenClaw commands:
 - openclaw hooks list 
 - openclaw hooks enable <name>
 - openclaw hooks disable <name>
+OpenClaw stores its files in a hidden folde ```~/.openclaw```
 
 Common ollama commands: 
+- ollama list
+- ollama ps
 - ollama pull <model_name>
 - ollama run <model_name>
 - ollama rm <model_name>
-
+Ollama stores models in a hidden folder ```~/.ollama/models```
 repomix: 
 - cd into repo root and run 'repomix' - this will output a file to that can be fed to AI models
 ```
 # Example Usage
 cat repomix-output.xml | ollama run qwen2.5-coder:7b "I have attached my repository in XML format. Please analyze the logic flow between the main entry script and the sub-modules."
 ````
+
+OpenClaw Docs: 
+- https://docs.openclaw.ai/gateway/remote
+- https://docs.openclaw.ai/web/control-ui
+
+OpenClaw FAQ: 
+- https://docs.openclaw.ai/start/faq
+
+OpenClaw site: 
+- https://docs.openclaw.ai/
