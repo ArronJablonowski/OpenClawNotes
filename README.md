@@ -65,13 +65,15 @@ brew install repomix
 ```zsh
 mkdir ~/Applications && brew install --cask --appdir=~/Applications stats
 ```
+Open Stats in the GUI. {config}
 
 ### Install Mac Fan Control 
 ```zsh
 brew install --cask macs-fan-control
 ```
+Open Mac Fac Control in the GUI. {config}
 
-### Install 'uv' and fluidtop 
+### Install 'uv' and fluidtop to Monitor Performance
 ```zsh 
 curl -LsSf https://astral.sh/uv/install.sh | sh
 source $HOME/.local/bin/env sh, bash, zsh
