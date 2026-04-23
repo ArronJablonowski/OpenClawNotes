@@ -16,7 +16,7 @@ The biggest immediate risk is the supply chain. Since OpenClaw relies on `npm` p
 
 # 🧪 My OpenClaw setup recommendations for securing an AI Lab Environment 
 
-## 1. 📡 Network Isolation 
+## 1. 📡 Network Segmentation & Isolation (The Blast Radius Control 💣)
 Before proceeding it is important to isolate the OpenClaw system from the rest of the LAN (local area network). *see The Security Risks above*
 
 ### Put the system on its own dedicated and isolated VLAN. *VLANs are outside the scope of this guide - google VLAN* 
