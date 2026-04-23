@@ -166,8 +166,8 @@ As you go through the installer script:
   - Verify the LLM/AI user no longer has Admin privileges. 
 
 ## 📜 Quick Reference 
-- OpenClaw Gateway URL: 127.0.0.1:18789 
-- ollama base URL: http://127.0.0.1:11434
+- OpenClaw Gateway: 127.0.0.1:18789 
+- ollama base URL: 127.0.0.1:11434
 
 Common OpenClaw commands:
 - openclaw onboard 
