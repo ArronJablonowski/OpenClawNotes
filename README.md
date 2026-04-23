@@ -9,7 +9,7 @@ This document outlines a step-by-step guide for setting up a dedicated, *mostly*
 
 **Potential Spread:** If OpenClaw is compromised and given network access, the attack could potentially spread to other devices and data stores on the local network.
 ### ⚠️ Supply Chain Vulnerabilities
-If you follow this guid, the biggest immediate risk to your OpenClaw is the supply chain. Since OpenClaw relies on `npm` packages, a compromised dependency could unknowingly infect your system through package updates.
+The biggest immediate risk to your OpenClaw is the supply chain. Since OpenClaw relies on `npm` packages, a compromised dependency could unknowingly infect your system through package updates.
 *   *Always audit dependencies.*
 *   *Never trust a single source.*
 
