@@ -5,8 +5,7 @@
 This document outlines a step-by-step guide for setting up a dedicated, *mostly* secure, OpenClaw installation locally on Apple M series systems. 
 
 # The Security Risk tldr; 
-1. If the OpenClaw system becomes compromised, any data on that system should also be considered compromised. Files, passwords, api keys, etc. - *don't store sensitive data on the OpenClaw system*
-- *dont't use your daily driver system to run OpenClaw* 
+1. If the OpenClaw system becomes compromised, any data on that system should also be considered compromised. Files, passwords, api keys, etc.  *ie. don't store sensitive data on the OpenClaw system and dont't use your daily driver system to run OpenClaw* 
 2. If the OpenClaw system becomes compromised and it has access to anything else on the local network, that compromise could potentially spread across the local network to additional devices and data stores.
 ### ⚠️ Yes, the OpenClaw system can still become compromised by things outside of your conrol. Especially since OpenClaw uses npm packages, and supply chain attacks could unknowing occure and infect your system through compromised package updates. 
   - npm supply chain attacks have been in the Cyber Security news lately. Examples:
