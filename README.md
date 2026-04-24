@@ -67,8 +67,11 @@ rm -rf /Users/{admin_user}/Library/Suggestions/com.apple.iChat/*
  ```
 You may have to run these commands as root. If this still fails, then setup keypais for the root user and login directly as the root user over ssh. 
 ```
-# change to root user, cd to root's home, and pwd to ensure you are in root's home directory - /var/root
-sudo su && cd ~/ && pwd 
+# change to root user
+sudo su
+
+# cd to root's home, and pwd to ensure you are in root's home directory - /var/root
+cd ~/ && pwd 
 
 # make .ssh folder, cd into .ssh folder, make authorized_keys file
 mkdir .ssh && cd .ssh && touch authorized_keys
