@@ -50,21 +50,21 @@ killall -9 identityservicesd 2>/dev/null
 killall -9 Messages 2>/dev/null
 
 # Wipe the primary database and sync logic
-rm -rf /Users/arron/Library/Messages/chat.db*
-rm -rf /Users/arron/Library/Messages/Sync/*
+rm -rf /Users/{admin_user}/Library/Messages/chat.db*
+rm -rf /Users/{admin_user}/Library/Messages/Sync/*
 
 # Wipe the attachments (often the largest risk for data exfiltration)
-rm -rf /Users/arron/Library/Messages/Attachments/*
+rm -rf /Users/{admin_user}/Library/Messages/Attachments/*
 
 # Wipe the CloudKit sync caches and metadata
-rm -rf /Users/arron/Library/Messages/CloudKit*
-rm -rf /Users/arron/Library/Containers/com.apple.iChat/Data/Library/Caches/*
+rm -rf /Users/{admin_user}/Library/Messages/CloudKit*
+rm -rf /Users/{admin_user}/Library/Containers/com.apple.iChat/Data/Library/Caches/*
 
 # Clear the knowledge database (which tracks who you talk to)
-rm -rf /Users/arron/Library/Suggestions/com.apple.mobilephone/*
-rm -rf /Users/arron/Library/Suggestions/com.apple.iChat/*
+rm -rf /Users/{admin_user}/Library/Suggestions/com.apple.mobilephone/*
+rm -rf /Users/{admin_user}/Library/Suggestions/com.apple.iChat/*
  ```
-You may have to run these as root, and not just use sudo. If this still fails, then setup keypais for the root user and login directly as the root user over ssh. 
+You may have to run these commands as root. If this still fails, then setup keypais for the root user and login directly as the root user over ssh. 
 ```
 # change to root user, cd to root's home, and pwd to ensure you are in root's home directory - /var/root
 sudo su && cd ~/ && pwd 
@@ -75,6 +75,7 @@ mkdir .ssh && cd .ssh && touch authorized_keys
 # put your public key pair into the authorized_keys file
 echo "{your_public_key}" >> authorized_keys
 ```
+Now you should be able to ssh into the system as the root user. 
 
 ## 3. 🛰️ Allow Remote Access
 - **Enable SSH** *(Settings > General > Sharing > Remote Login: toggle on)*
