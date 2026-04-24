@@ -19,6 +19,12 @@ The biggest immediate risk to your OpenClaw is the supply chain. Since OpenClaw 
 *   *Always audit dependencies.*
 *   *Never trust a single source.*
 
+### ⚠️ Command Injection Vulnerabilities 
+In OpenClaw, command injection isn't just a coding bug; it’s an architectural risk known as the Lethal Trifecta. 
+ - **Access to Untrusted Content:** The agent can read emails, browse the web, or monitor messaging apps.
+ - **Autonomous Tool Use:** The agent has a "Skill" to run shell commands (bash, zsh, terminal).
+ - **Persistence:** The agent maintains a long-term memory and can run commands in the background.
+
 **🔑 SECRETS WARNING:** OpenClaw stores API tokens and session keys in plaintext within `~/.openclaw/credentials/`. Never include these in your Git commits or share your `SOUL.md` file if it contains sensitive environmental details.
 
 **🕸️ Potential Spread:** Without proper network segmentation, a compromised OpenClaw instance may be leveraged as a pivot point for unauthorized access to other internal network devices and network-attached storage.
