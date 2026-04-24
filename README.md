@@ -189,10 +189,10 @@ openclaw security audit --fix
 
 ## 🔒 7. Hardening the OpenClaw Agent (Zero-Trust Deployment)
 
-As a security professional, you must treat an autonomous agent as **untrusted code execution**. By default, OpenClaw has the same permissions as your `LLM/AI` user. If the agent is "prompt injected" while reading a malicious file, email, or webpage, it could trick the system into running malicious commands or compromise the system. 
+You must treat an autonomous agent as **untrusted code execution**. By default, OpenClaw has the same permissions as your `LLM/AI` user. If the agent is "prompt injected" while reading a malicious file, email, or webpage, it could trick the system into running malicious commands or compromise the system. 
 
 ### **Implement "Least Privilege" Command Filtering**
-OpenClaw’s `exec` tool is a powerful vector. Restrict it to a "Default Deny" posture by configuring an allowlist of approved binaries.
+OpenClaw’s `exec` tool is a powerful vector. Restrict it to a "Default Deny" posture by configuring an allow list of approved binaries.
 
 1. Edit your tool policy: `nano ~/.openclaw/config.yaml`
 2. Update the `tools.exec` section:
@@ -213,7 +213,7 @@ tools:
       - "curl"      # Prevent direct exfiltration via CLI
       - "wget"      # Prevent direct exfiltration via CLI
 ```
-Modify the allow and deny list as needed. 
+Modify the allow and deny list as needed. Any bianary not listed should promt you before executing. 
 
 <!--- 
 ## 🔒 8. SOC-Grade Hardening 
