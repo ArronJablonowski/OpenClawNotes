@@ -3,7 +3,7 @@
 🚧 🚧 🚧 Under Construction 🚧 🚧 🚧
 *in beta* 
 
-This document provides a guide for setting up a locally dedicated and security-hardened installation of OpenClaw on Apple Silicon hardware. 
+This document provides a guide for setting up a dedicated, locally hosted, and security-hardened installation of OpenClaw on Apple Silicon hardware. 
 
  🎯 The Objective - I developed this guide for two primary reasons:
 - First, to personally explore OpenClaw as an AI Agent, and experiment with it's security. Given its reputation as a "high-risk" autonomous AI agent.  
