@@ -220,8 +220,8 @@ Modify the allow and deny list as needed. Any bianary not listed should promt yo
 ---> 
 
 ## 📜 Quick Reference 
-- OpenClaw Gateway: 127.0.0.1:18789 
-- ollama base URL: 127.0.0.1:11434
+- Default OpenClaw Gateway: 127.0.0.1:18789 
+- Default ollama base URL: 127.0.0.1:11434
 
 Common OpenClaw commands:
 - openclaw onboard
@@ -244,9 +244,9 @@ Common ollama commands:
 Ollama stores models in a hidden folder ```~/.ollama/models```
 
 repomix: 
-- cd into repo root and run 'repomix' - this will output a file to that can be fed to AI models
+- cd into repo's root and run 'repomix' - this will output a file to that can be fed to AI models
 ```
-# Example Usage
+# Example feeding repomix-output to an AI model for analysis
 cat repomix-output.xml | ollama run qwen2.5-coder:7b "I have attached my repository in XML format. Please analyze the logic flow between the main entry script and the sub-modules."
 ````
 
