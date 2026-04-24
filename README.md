@@ -144,14 +144,15 @@ setw -g pane-base-index 1
 set-option -g allow-rename off
 ```
 
-### 4j. sudo visudo 
-Add commands to the sudoer's file so your secondary LLM/AI user will be allowed to run some commands as root. 
+### 4j. sudo visudo  
 - vi commands: 
   - press 'i'              *enter insert mode*
   - press '{esc} : q!'     *quit vi, without writing changes to the file*
   - press '{esc} : wq'     *write the changes, and then quit vi*
   - press '{esc} : w'      *Save (write) the file but stay in the editor*
   - press 'ZZ'             *while in Command Mode, no colon needed - Save and quit q*
+    
+Add commands to the sudoer's file so your secondary LLM/AI user will be allowed to run some commands as root.
 ```
 sudo visudo
 ```
