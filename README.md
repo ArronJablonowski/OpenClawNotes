@@ -324,7 +324,7 @@ mkdir .ssh && cd .ssh && touch authorized_keys
 # put your public key pair into the authorized_keys file
 echo "{your_public_key}" >> authorized_keys
 ```
-Now you should be able to ssh into the system as the root user. *Assuming you've already allowed Remote Access on this system - step 3 below*
+Now you should be able to ssh into the system as the root user. *Assuming you've already allowed Remote Access on this system - step 3*
 
 
 *Note:* Don't forget to clean up other areas of your user profile - local files, browser files (browser history, cookies, etc.), and any other sensitive information you would want to keep private. 
