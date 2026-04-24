@@ -42,6 +42,7 @@ Before proceeding it is important to isolate the OpenClaw system from the rest o
 - **Log Out of Your AppleID and Cleanup Synced Data:** This will limit the impact if your system gets compromised, and the attack is able to elevate privileges. 
   - If you've ever logged into your AppleID using this account, log out. *(Settings > click on your AppleID > click Log Out)*
   - When promoted uncheck all the boxes to save cloud data locally. Delete all of your pictures, and personal data from your user's directory.
+  - Check you Keychain & Passwords app, and delete out any stored credentials, etc. that are not needed for your lab enviornment. 
   - Delete any synced iMessages or texts using the commands below. Replace the "{admin_user}" with your admin user's account name. 
  ```
 # Kill the background agents first so they don't lock the files
