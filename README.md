@@ -260,8 +260,9 @@ OpenClaw FAQ:
 OpenClaw: 
 - https://docs.openclaw.ai/
 
+ollama: 
+- https://ollama.com/
+
 OhMyZsh: 
 - https://ohmyz.sh/
 
-ollama: 
-- https://ollama.com/
