@@ -264,4 +264,4 @@ OhMyZsh:
 - https://ohmyz.sh/
 
 ollama: 
-https://ollama.com/
+- https://ollama.com/
