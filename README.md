@@ -33,11 +33,46 @@ Before proceeding it is important to isolate the OpenClaw system from the rest o
 - *Isolation via Docker is not recommended as docker will cause a performace hit to the LLMs. (~10-20% slower)*
 
 ## 2. 🧑‍💻 Admin User Configuration 
-- **Make an Admin User:** This account will be used to run admin tasks only, and NOT LLMs. 
+- **Make an Admin User:** This account will be used to run admin tasks only, and NOT LLMs.
   - Set a static (fixed) IP address.    
   - Disable rotating MAC if using a DHCP lease and WiFi *(Settings > Network > WiFi > SSID's (...) > Network Settings > Private WiFi address > Set to: "Fixed")*
   - Set Screen timeout *(Settings > Lock Screen)*
   - Set Energy settings *(Settings > Energy: -- turn low power mode off -- prevent automatic sleeping when the display is off should be turned on -- Start up automatically after a power failure should be turned on)*
+
+- **Log Out of Your AppleID and Cleanup Synced Data:** This will limit the impact if your system gets compromised. 
+  - If you've ever logged into your AppleID using this account, log out. *(Settings > click on your AppleID > click Log Out)*
+  - When promoted uncheck all the boxes to save cloud data locally. Delete all of your pictures, and personal data from your user's directory.
+  - Delete any synced iMessages or texts using the commands below.
+ ```
+# Kill the background agents first so they don't lock the files
+killall -9 IMDPersistenceAgent 2>/dev/null && killall -9 identityservicesd 2>/dev/null && killall -9 Messages 2>/dev/null
+
+# Wipe the primary database and sync logic
+rm -rf /Users/arron/Library/Messages/chat.db*
+rm -rf /Users/arron/Library/Messages/Sync/*
+
+# Wipe the attachments (often the largest risk for data exfiltration)
+rm -rf /Users/arron/Library/Messages/Attachments/*
+
+# Wipe the CloudKit sync caches and metadata
+rm -rf /Users/arron/Library/Messages/CloudKit*
+rm -rf /Users/arron/Library/Containers/com.apple.iChat/Data/Library/Caches/*
+
+# Clear the knowledge database (which tracks who you talk to)
+rm -rf /Users/arron/Library/Suggestions/com.apple.mobilephone/*
+rm -rf /Users/arron/Library/Suggestions/com.apple.iChat/*
+ ```
+You may have to run these as root, and not just use sudo. If this still fails, then setup keypais for the root user and login directly as the root user over ssh. 
+```
+# change to root user, cd to root's home, and pwd to ensure you are in root's home directory - /var/root
+sudo su && cd ~/ && pwd 
+
+# make .ssh folder, cd into .ssh folder, make authorized_keys file
+mkdir .ssh && cd .ssh && touch authorized_keys
+
+# put your public key pair into the authorized_keys file
+echo "{your_public_key}" >> authorized_keys
+```
 
 ## 3. 🛰️ Allow Remote Access
 - **Enable SSH** *(Settings > General > Sharing > Remote Login: toggle on)*
