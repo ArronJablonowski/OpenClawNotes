@@ -257,5 +257,8 @@ OpenClaw Docs:
 OpenClaw FAQ: 
 - https://docs.openclaw.ai/start/faq
 
-OpenClaw site: 
+OpenClaw: 
 - https://docs.openclaw.ai/
+
+Oh My Zsh: 
+- https://ohmyz.sh/
