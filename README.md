@@ -202,7 +202,7 @@ sudo visudo
 ```
 lobster_user ALL=(ALL) NOPASSWD: /usr/bin/powermetrics
 lobster_user ALL=(ALL) NOPASSWD: /opt/homebrew/bin/asitop
-lobster_user ALL=(ALL) NOPASSWD: /Users/aj_lab/.local/bin/uvx fluidtop
+lobster_user ALL=(ALL) NOPASSWD: /Users/lobster_user/.local/bin/uvx fluidtop
 ```
 
 ### 4k. Install OpenClaw 🦞 
