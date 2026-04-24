@@ -1,4 +1,4 @@
-# 🦞 OpenClaw 🦞 AI Lab Setup & Hardening Guide for Apple Silicon 🖥️
+# 🦞 OpenClaw 🦞 AI Lab Setup & Hardening Guide for Apple Silicon 
 
 🚧 🚧 🚧 Under Construction 🚧 🚧 🚧
 *in beta* 
