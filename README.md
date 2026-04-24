@@ -224,9 +224,13 @@ tools:
 ```
 Modify the allow and deny list as needed. Any binary not listed should prompt you before executing. 
 
-<!--- 
-## 🔒 8. SOC-Grade Hardening 
----> 
+## 8. 🧦 SOC-Grade Security Monitoring 
+Additionally, you should monitor both the host and it's network activity for any indicators of compromise. 
+- Host monitoring
+  - Setup EDR and log forwarding agents, such as Elastic Agents, Wazuh, etc. 
+
+- Network monitoring 
+  - Setup port mirroring, and feed the mirrored network traffic into something like a Zeek/Bro sensor, or my personal favorite, a Security Onion sensor. 
 
 ## 📜 Quick Reference 
 - Default OpenClaw Gateway: 127.0.0.1:18789 
