@@ -38,7 +38,7 @@ By enforcing strict network segmentation, this configuration mitigates the threa
 - *VLAN setup and creation is outside the scope of this guide.*
 - *Isolation via Docker is not recommended as docker will cause a performance hit to the LLMs. (~10-20% slower)*
 
-## 2. 🧑‍💻 Admin User Configuration 
+## 2. 🧑‍💻 Admin User Creation
 If the system has been used for personal use, a brand new admin account should be created. Then delete out any prior personal use accounts from the system entirely. *Best practice would be to fully re-image/reload MacOS for a fresh system.* 
 
 - **Make an Admin User:** This account will be used to run admin tasks only, and NOT LLMs. *(Settings > Users & Groups > Add User)*
