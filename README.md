@@ -231,7 +231,7 @@ openclaw security audit --fix
 
 ## 🔒 7. Hardening the OpenClaw Agent (Zero-Trust Deployment)
 
-You must treat an autonomous agent as **untrusted code execution**. By default, OpenClaw has the same permissions as your `LLM/AI` user. If the agent is "prompt injected" while reading a malicious file, email, or webpage, it could trick the system into running malicious commands or compromise the system. 
+You must treat an autonomous agent as **untrusted code execution**. By default, OpenClaw has the same permissions as your `LLM/AI` user. If the agent is "prompt injected" while reading a malicious file, email, or webpage, it could trick the system into running malicious commands and/or compromise the system. 
 
 ### **Implement "Least Privilege" Command Filtering**
 OpenClaw’s `exec` tool is a powerful vector. Restrict it to a "Default Deny" posture by configuring an allow list of approved binaries.
