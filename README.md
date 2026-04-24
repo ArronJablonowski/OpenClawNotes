@@ -35,7 +35,7 @@ In OpenClaw, command injection isn't just a coding bug; it’s an architectural 
 Before proceeding it is important to isolate the OpenClaw system from the rest of the LAN (local area network). *See The Security Risks above*
 
 ### 🛡️ Put the OpenClaw system on its own dedicated and isolated VLAN. 
-This will isolate and protects the rest of the LAN from any potential lateral movement attempts, if the system were to become compromised. 
+By enforcing strict network segmentation, this configuration mitigates the threat of internal pivoting and contains potential adversarial activity within the isolated network segment. 
 - *VLANs are outside the scope of this guide - google 'what is a VLAN' - or ask a cloud AI provider* 
 - *Isolation via Docker is not recommended as docker will cause a performance hit to the LLMs. (~10-20% slower)*
 
