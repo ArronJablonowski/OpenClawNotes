@@ -265,8 +265,8 @@ Common ollama commands:
 repomix: 
 - cd into repo's root and run 'repomix' - this will output a file to that can be fed to AI models
 
-# Example feeding repomix-output to an AI model for analysis
 ```zsh
+# Example feeding repomix-output to an AI model for analysis
 cat repomix-output.xml | ollama run qwen2.5-coder:7b "I have attached my repository in XML format. Please analyze the logic flow between the main entry script and the 
 sub-modules."
 ```
