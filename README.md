@@ -39,7 +39,7 @@ Before proceeding it is important to isolate the OpenClaw system from the rest o
   - Set Screen timeout *(Settings > Lock Screen)*
   - Set Energy settings *(Settings > Energy: -- turn low power mode off -- prevent automatic sleeping when the display is off should be turned on -- Start up automatically after a power failure should be turned on)*
 
-- ** ⚠️ Log Out of Your AppleID and Cleanup Synced Data:** This will limit the impact if your system gets compromised, and the attack is able to elevate privileges. 
+- **⚠️ Log Out of Your AppleID and Cleanup Synced Data:** This will limit the impact if your system gets compromised, and the attack is able to elevate privileges. 
   - If you've ever logged into your AppleID using this account or any account on the system, log out. *(Settings > click on your AppleID > click Log Out)*
   - When promoted uncheck all the boxes to save cloud data locally. Delete all of your pictures, and personal data from your user's directories.
   - Check you Keychain & Passwords app, and delete out any stored credentials, etc. that are not needed for your lab enviornment. *(!! Ensure you're logged out of your AppleID first so you don't delete/modify your synced Keychain)* 
