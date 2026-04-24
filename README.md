@@ -225,7 +225,8 @@ tools:
 Modify the allow and deny list as needed. Any binary not listed should prompt you before executing. 
 
 ## 8. 🧦 SOC-Grade Security Monitoring 
-Additionally, you should monitor both the host and it's network activity for any indicators of compromise. 
+To achieve a stronger and more mature security posture, it is imperative to implement continuous telemetry monitoring of both host-level and network-layer activity. This dual-visibility approach remains the most effective methodology for identifying early Indicators of Compromise (IoCs) and mitigating potential security incidents.
+
 - Host monitoring
   - Setup EDR and log forwarding agents, such as Elastic Agents, Wazuh, etc. 
 
