@@ -65,7 +65,7 @@ rm -rf /Users/{admin_user}/Library/Containers/com.apple.iChat/Data/Library/Cache
 rm -rf /Users/{admin_user}/Library/Suggestions/com.apple.mobilephone/*
 rm -rf /Users/{admin_user}/Library/Suggestions/com.apple.iChat/*
  ```
-You may have to run these commands as root. If this still fails, then setup keypais for the root user and login directly as the root user over ssh. 
+You may have to run these commands as root. If this still fails, then setup keypairs for the root user and login directly as the root user over ssh. 
 ```
 # change to root user
 sudo su
