@@ -33,53 +33,13 @@ Before proceeding it is important to isolate the OpenClaw system from the rest o
 - *Isolation via Docker is not recommended as docker will cause a performance hit to the LLMs. (~10-20% slower)*
 
 ## 2. 🧑‍💻 Admin User Configuration 
+It is best practice to make a brand new admin account, and entirely delete out any prior personal use accounts from the system.
+
 - **Make an Admin User:** This account will be used to run admin tasks only, and NOT LLMs.
   - Set a static (fixed) IP address.    
   - Disable rotating MAC if using a DHCP lease and WiFi *(Settings > Network > WiFi > SSID's (...) > Network Settings > Private WiFi address > Set to: "Fixed")*
   - Set Screen timeout *(Settings > Lock Screen)*
   - Set Energy settings *(Settings > Energy: -- turn low power mode off -- prevent automatic sleeping when the display is off should be turned on -- Start up automatically after a power failure should be turned on)*
-
-- **⚠️ Log Out of Your AppleID and Cleanup Synced Data:** This will limit the impact if your system gets compromised, and the attack is able to elevate privileges. 
-  - If you've ever logged into your AppleID using this account or any account on the system, log out. *(Settings > click on your AppleID > click Log Out)*
-  - When promoted uncheck all the boxes to save cloud data locally. Delete all of your pictures, and personal data from your user's directories.
-  - Check you Keychain & Passwords app, and delete out any stored credentials, etc. that are not needed for your lab environment. *(!! Ensure you're logged out of your AppleID first so you don't delete/modify your synced Keychain)* 
-  - Delete any synced iMessages or texts using the commands below. Replace the "{admin_user}" with your admin user's account name. 
- ```
-# Kill the background agents first so they don't lock the files
-killall -9 IMDPersistenceAgent 2>/dev/null
-killall -9 identityservicesd 2>/dev/null
-killall -9 Messages 2>/dev/null
-
-# Wipe the primary database and sync logic
-rm -rf /Users/{admin_user}/Library/Messages/chat.db*
-rm -rf /Users/{admin_user}/Library/Messages/Sync/*
-
-# Wipe the attachments (often the largest risk for data exfiltration)
-rm -rf /Users/{admin_user}/Library/Messages/Attachments/*
-
-# Wipe the CloudKit sync caches and metadata
-rm -rf /Users/{admin_user}/Library/Messages/CloudKit*
-rm -rf /Users/{admin_user}/Library/Containers/com.apple.iChat/Data/Library/Caches/*
-
-# Clear the knowledge database (which tracks who you talk to)
-rm -rf /Users/{admin_user}/Library/Suggestions/com.apple.mobilephone/*
-rm -rf /Users/{admin_user}/Library/Suggestions/com.apple.iChat/*
- ```
-You may have to run these commands as root. If this still fails, then setup keypairs for the root user and login directly as the root user over ssh. 
-```
-# change to root user
-sudo su
-
-# cd to root's home, and pwd to ensure you are in root's home directory - /var/root
-cd ~/ && pwd 
-
-# make .ssh folder, cd into .ssh folder, make authorized_keys file
-mkdir .ssh && cd .ssh && touch authorized_keys
-
-# put your public key pair into the authorized_keys file
-echo "{your_public_key}" >> authorized_keys
-```
-Now you should be able to ssh into the system as the root user. *Assuming you've already allowed Remote Access on this system - step 3 below*
 
 ## 3. 🛰️ Allow Remote Access
 - **Enable SSH** *(Settings > General > Sharing > Remote Login: toggle on)*
@@ -308,3 +268,49 @@ ollama:
 OhMyZsh: 
 - https://ohmyz.sh/
 
+##
+
+## AppleID Cleanup 
+If you must use a previously used personal account for some reason, here are some basic cleanup steps. 
+
+- **⚠️ Log Out of Your AppleID and Cleanup Synced Data:** This will limit the impact if your system gets compromised, and the attack is able to elevate privileges. 
+  - If you've ever logged into your AppleID using this account or any account on the system, log out. *(Settings > click on your AppleID > click Log Out)*
+  - When promoted uncheck all the boxes to save cloud data locally. Delete all of your pictures, and personal data from your user's directories.
+  - Check you Keychain & Passwords app, and delete out any stored credentials, etc. that are not needed for your lab environment. *(!! Ensure you're logged out of your AppleID first so you don't delete/modify your synced Keychain)* 
+  - Delete any synced iMessages or texts using the commands below. Replace the "{admin_user}" with your admin user's account name. 
+ ```
+# Kill the background agents first so they don't lock the files
+killall -9 IMDPersistenceAgent 2>/dev/null
+killall -9 identityservicesd 2>/dev/null
+killall -9 Messages 2>/dev/null
+
+# Wipe the primary database and sync logic
+rm -rf /Users/{admin_user}/Library/Messages/chat.db*
+rm -rf /Users/{admin_user}/Library/Messages/Sync/*
+
+# Wipe the attachments (often the largest risk for data exfiltration)
+rm -rf /Users/{admin_user}/Library/Messages/Attachments/*
+
+# Wipe the CloudKit sync caches and metadata
+rm -rf /Users/{admin_user}/Library/Messages/CloudKit*
+rm -rf /Users/{admin_user}/Library/Containers/com.apple.iChat/Data/Library/Caches/*
+
+# Clear the knowledge database (which tracks who you talk to)
+rm -rf /Users/{admin_user}/Library/Suggestions/com.apple.mobilephone/*
+rm -rf /Users/{admin_user}/Library/Suggestions/com.apple.iChat/*
+ ```
+You may have to run these commands as root. If this still fails, then setup keypairs for the root user and login directly as the root user over ssh. 
+```
+# change to root user
+sudo su
+
+# cd to root's home, and pwd to ensure you are in root's home directory - /var/root
+cd ~/ && pwd 
+
+# make .ssh folder, cd into .ssh folder, make authorized_keys file
+mkdir .ssh && cd .ssh && touch authorized_keys
+
+# put your public key pair into the authorized_keys file
+echo "{your_public_key}" >> authorized_keys
+```
+Now you should be able to ssh into the system as the root user. *Assuming you've already allowed Remote Access on this system - step 3 below*
