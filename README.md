@@ -42,7 +42,7 @@ By enforcing strict network segmentation, this configuration mitigates the threa
 If the system has been used for personal use, a brand new admin account should be created. Then delete out any prior personal use accounts from the system entirely. *Best practice would be to fully re-image/reload MacOS for a fresh system.* 
 
 - **Make an Admin User:** This account will be used to run admin tasks only, and NOT LLMs. *(Settings > Users & Groups > Add User)*
-  - Login via the GUI and go through the initial setup screens. Do Not sign into your AppleID. Skip it. 
+  - Login to the new account via the GUI and go through the initial setup screens. DO NOT sign into your AppleID. Skip it. 
   - Set a static (fixed) IP address.    
   - Disable rotating MAC if using a DHCP lease and WiFi *(Settings > Network > WiFi > SSID's (...) > Network Settings > Private WiFi address > Set to: "Fixed")*
   - Set Screen timeout *(Settings > Lock Screen)*
