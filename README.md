@@ -177,7 +177,7 @@ As you go through the installer script:
   - Reboot the system so these changes take effect.
   - Verify the LLM/AI user no longer has Admin privileges. 
 
-## 6. Tell OpenClaw to Run a Security Audit
+## 6. Login to LLM/AI User Account & Tell OpenClaw to Run a Security Audit
 ```bash
 openclaw security audit --deep
 ```
