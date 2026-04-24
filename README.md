@@ -14,7 +14,7 @@ This document provides step-by-step guide for establishing a dedicated, *mostly*
 # 🚨 The Security Risks
 **🛑 PRIMARY WARNING:** If the OpenClaw system is compromised, **all data on that system must be considered compromised.** This includes local files, passwords, API keys, etc. **Do not store sensitive data on the OpenClaw system, and do not use your daily driver machine to run OpenClaw.**
 
-**🕸️ Potential Spread:** If OpenClaw is compromised and given network access, the attack could potentially spread to other devices and data stores on the local network; if the system has not been properly segmented from the rest of the network.
+**🕸️ Potential Spread:** Wothout proper network segmentation, a compromised OpenClaw instance may be leveraged as a pivot point for unauthorized access to other internal network devices and network-attached storage.
 
 ### ⚠️ Supply Chain Vulnerabilities
 The biggest immediate risk to your OpenClaw is the supply chain. Since OpenClaw relies on community developed `skills` and `npm` packages, a compromised `skill` or `npm` dependency could unknowingly infect your system through package updates.
