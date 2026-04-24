@@ -30,7 +30,7 @@ Before proceeding it is important to isolate the OpenClaw system from the rest o
 
 ### 🛡️ Put the OpenClaw system on its own dedicated and isolated VLAN. 
 - *VLANs are outside the scope of this guide - google 'what is a VLAN' - or ask a cloud AI provider* 
-- *Isolation via Docker is not recommended as docker will cause a performace hit to the LLMs. (~10-20% slower)*
+- *Isolation via Docker is not recommended as docker will cause a performance hit to the LLMs. (~10-20% slower)*
 
 ## 2. 🧑‍💻 Admin User Configuration 
 - **Make an Admin User:** This account will be used to run admin tasks only, and NOT LLMs.
@@ -42,7 +42,7 @@ Before proceeding it is important to isolate the OpenClaw system from the rest o
 - **⚠️ Log Out of Your AppleID and Cleanup Synced Data:** This will limit the impact if your system gets compromised, and the attack is able to elevate privileges. 
   - If you've ever logged into your AppleID using this account or any account on the system, log out. *(Settings > click on your AppleID > click Log Out)*
   - When promoted uncheck all the boxes to save cloud data locally. Delete all of your pictures, and personal data from your user's directories.
-  - Check you Keychain & Passwords app, and delete out any stored credentials, etc. that are not needed for your lab enviornment. *(!! Ensure you're logged out of your AppleID first so you don't delete/modify your synced Keychain)* 
+  - Check you Keychain & Passwords app, and delete out any stored credentials, etc. that are not needed for your lab environment. *(!! Ensure you're logged out of your AppleID first so you don't delete/modify your synced Keychain)* 
   - Delete any synced iMessages or texts using the commands below. Replace the "{admin_user}" with your admin user's account name. 
  ```
 # Kill the background agents first so they don't lock the files
@@ -126,7 +126,7 @@ mkdir ~/Applications && brew install --cask --appdir=~/Applications stats
 ```zsh
 brew install --cask macs-fan-control
 ```
-- *Open Mac Fac Control in the GUI. {config}*
+- *Open Mac Fan Control in the GUI. {config}*
 
 ### 4f. Install 'uv' and fluidtop to Monitor Performance
 ```zsh 
@@ -136,13 +136,13 @@ sudo uvx fluidtop
 ```
 
 ### 4g. Modify the Terminal's Prompt 
-This will be a visual que to help identify when you're in the LLM/AI user's terminal, and help prevent entering commands into the wrong terminal window. 
+This will be a visual cue to help identify when you're in the LLM/AI user's terminal, and help prevent entering commands into the wrong terminal window. 
 ```
 nano ~/.zshrc
 ```
 - Add the following to the end of the .zshrc file:
 ```
-# This function prepends the 'Brain' emoji (🧠) to the prompt for visual awareness.
+# This function prepends the 'Brain' emoji (🧠) to the prompt for a visual cue/awareness.
 preprompt_brain() {
     # \e[33m is the ANSI code for yellow/amber, making it noticeable.
     echo -e "\e[33m🧠\e[0m " 
@@ -255,7 +255,7 @@ tools:
       - "curl"      # Prevent direct exfiltration via CLI
       - "wget"      # Prevent direct exfiltration via CLI
 ```
-Modify the allow and deny list as needed. Any bianary not listed should promt you before executing. 
+Modify the allow and deny list as needed. Any binary not listed should prompt you before executing. 
 
 <!--- 
 ## 🔒 8. SOC-Grade Hardening 
@@ -275,7 +275,7 @@ Common OpenClaw commands:
 - openclaw hooks enable <name>
 - openclaw hooks disable <name>
 - openclaw --help
-OpenClaw stores its files in a hidden folde ```~/.openclaw```
+OpenClaw stores its files in a hidden folder ```~/.openclaw```
 
 Common ollama commands: 
 - ollama list
