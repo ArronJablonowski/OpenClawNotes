@@ -277,7 +277,7 @@ OhMyZsh:
 
 ##
 
-## AppleID Cleanup 
+## AppleID Cleanup - *If you MUST use an existing user's account...*
 If you must use a previously used personal account for some reason, here are some basic cleanup steps. 
 
 - **⚠️ Log Out of Your AppleID and Cleanup Synced Data:** This will limit the impact if your system gets compromised, and the attack is able to elevate privileges. 
