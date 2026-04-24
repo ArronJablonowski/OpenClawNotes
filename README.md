@@ -11,7 +11,7 @@ This document provides step-by-step guide for establishing a dedicated, *mostly*
 
 ##
 
-# 🚨 The Security Risks
+# 🚨 The Security Risks 🚨
 **🛑 PRIMARY WARNING:** If the OpenClaw system is compromised, **all data on that system must be considered compromised.** This includes local files, passwords, API keys, etc. **Do not store sensitive data on the OpenClaw system, and do not use your daily driver machine to run OpenClaw.**
 
 **🕸️ Potential Spread:** Without proper network segmentation, a compromised OpenClaw instance may be leveraged as a pivot point for unauthorized access to other internal network devices and network-attached storage.
