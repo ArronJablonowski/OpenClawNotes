@@ -38,6 +38,7 @@ and contains potential adversarial activity within the isolated network segment.
 By enforcing strict network segmentation, this configuration mitigates the threat of internal pivoting and contains potential adversarial activity within the isolated 
 network segment. 
 - **VLAN setup and creation is outside the scope of this guide.**
+  - However VLANs are usually implimented using an prosumer grade firewall. Unifi, Netgate/pfSense, etc.  
 - **Isolation via Docker is not recommended as docker will cause a performance hit to the LLMs. (~10-20% slower)**
 
 ## 2. 🧑‍💻 Admin User Creation
