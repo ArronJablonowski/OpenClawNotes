@@ -53,7 +53,7 @@ If the system has been used for personal use, a brand new admin account should b
   - Grant **Full Disk Access** to Terminal/SSH.
   - Setup SSH key pairs for the admin user.
 
-## 4. 🤖 LLM / AI User Configuration
+## 4. 🤖 LLM / AI User Creation
 - **Create a secondary User Account** with (*temporary*) admin privileges *(Settings > Users & Groups > Add User)*
   - *Note: Admin rights will be removed after tool installation for security / principle of least privilege.*
 - Now log into the new **secondary account** via the GUI; skip Apple ID sign-in for security and privacy.
