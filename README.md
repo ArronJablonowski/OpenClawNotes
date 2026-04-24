@@ -28,25 +28,29 @@ In OpenClaw, command injection isn't just a coding bug; it’s an architectural 
 
 **🕸️ Potential Spread:** Without proper network segmentation, a compromised OpenClaw instance may be leveraged as a pivot point for unauthorized access to other internal network devices and network-attached storage.
 
-# 🧪 OpenClaw Setup Recommendations for Securing a Locally Hosted AI Lab Environment 🧪
+## 🧪 OpenClaw Setup Recommendations for Securing a Locally Hosted AI Lab Environment 🧪
 
 ## 1. 📡 Network Segmentation & Isolation - 💣 *The Blast Radius Control*  💣
-Before proceeding it is important to isolate the OpenClaw system from the rest of the LAN (local area network). *See The Security Risks above*
+Before proceeding, it is important to isolate the OpenClaw system from the rest of the LAN (local area network). This helps mitigate the threat of internal pivoting 
+and contains potential adversarial activity within the isolated network segment.
 
 ### 🛡️ Put the OpenClaw system on its own dedicated and isolated VLAN. 
-By enforcing strict network segmentation, this configuration mitigates the threat of internal pivoting and contains potential adversarial activity within the isolated network segment. 
-- *VLAN setup and creation is outside the scope of this guide.*
-- *Isolation via Docker is not recommended as docker will cause a performance hit to the LLMs. (~10-20% slower)*
+By enforcing strict network segmentation, this configuration mitigates the threat of internal pivoting and contains potential adversarial activity within the isolated 
+network segment. 
+- **VLAN setup and creation is outside the scope of this guide.**
+- **Isolation via Docker is not recommended as docker will cause a performance hit to the LLMs. (~10-20% slower)**
 
 ## 2. 🧑‍💻 Admin User Creation
-If the system has been used for personal use, a brand new admin account should be created. Then delete out any prior personal use accounts from the system entirely. *Best practice would be to fully re-image/reload MacOS for a fresh system.* 
+If the system has been used for personal use, create a brand new admin account and delete any prior personal use accounts from the system entirely. Best practice would 
+be to fully re-image/reload MacOS for a fresh system.
 
-- **Make an Admin User:** This account will be used to run admin tasks only, and NOT LLMs. *(Settings > Users & Groups > Add User)*
+- **Make an Admin User:** This account will be used to run admin tasks only, and NOT LLMs.
   - Login to the new account via the GUI and go through the initial setup screens. DO NOT sign into your AppleID. Skip it. 
   - Set a static (fixed) IP address.    
   - Disable rotating MAC if using a DHCP lease and WiFi *(Settings > Network > WiFi > SSID's (...) > Network Settings > Private WiFi address > Set to: "Fixed")*
   - Set Screen timeout *(Settings > Lock Screen)*
-  - Set Energy settings *(Settings > Energy: -- turn low power mode off -- prevent automatic sleeping when the display is off should be turned on -- Start up automatically after a power failure should be turned on)*
+  - Set Energy settings *(Settings > Energy: -- turn low power mode off -- prevent automatic sleeping when the display is off should be turned on -- Start up 
+automatically after a power failure should be turned on)*
 
 ## 3. 🛰️ Allow Remote Access
 - **Enable SSH** *(Settings > General > Sharing > Remote Login: toggle on)*
@@ -58,22 +62,20 @@ If the system has been used for personal use, a brand new admin account should b
   - *Note: Admin rights will be removed after tool installation for security / principle of least privilege.*
 - Now log into the new **secondary account** via the GUI; skip Apple ID sign-in for security and privacy.
   - *Note: The following installs and commands will happen under this secondary account.*
-- Change the **Desktop Background** to a distinct color/image as a visual cue for AI-specific environment.
-- Pin the terminal to the dock.
 
-### 4a. Install Oh My Zsh - Shell Extension 
+## 4.1 Install Oh My Zsh - Shell Extension 
 ```sh
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-### 4b. Install Homebrew - Package Manager 
+## 4.2 Install Homebrew - Package Manager 
 ```bash
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-### 4c. Install Brew Utilities
+## 4.3 Install Brew Utilities
 ```zsh
 brew install git node htop tmux
 brew install ollama
@@ -83,32 +85,32 @@ brew install asitop
 brew install repomix
 ```
 
-### 4d. Install Stats to Monitor System Temps
+## 4.4 Install Stats to Monitor System Temps
 ```zsh
 mkdir ~/Applications && brew install --cask --appdir=~/Applications stats
 ```
-- *Open Stats in the GUI. {config}*
+- *Open Stats in the GUI.*
 
-### 4e. Install Mac Fan Control 
+## 4.5 Install Mac Fan Control 
 ```zsh
 brew install --cask macs-fan-control
 ```
-- *Open Mac Fan Control in the GUI. {config}*
+- *Open Mac Fan Control in the GUI.*
 
-### 4f. Install 'uv' and fluidtop to Monitor Performance
+## 4.6 Install 'uv' and fluidtop to Monitor Performance
 ```zsh 
 curl -LsSf https://astral.sh/uv/install.sh | sh
 source $HOME/.local/bin/env sh, bash, zsh
 sudo uvx fluidtop
 ```
 
-### 4g. Modify the Terminal's Prompt 
+## 4.7 Modify the Terminal's Prompt 
 This will be a visual cue to help identify when you're in the LLM/AI user's terminal, and help prevent entering commands into the wrong terminal window. 
-```
+```zsh
 nano ~/.zshrc
 ```
 - Add the following to the end of the .zshrc file:
-```
+```zsh
 # This function prepends the 'Brain' emoji (🧠) to the prompt for a visual cue/awareness.
 preprompt_brain() {
     # \e[33m is the ANSI code for yellow/amber, making it noticeable.
@@ -120,28 +122,29 @@ precmd() {
 }
 ```
 - Reload the zshrc file
-```
+```zsh
 source ~/.zshrc
 ```
 
-### 4h. Harden ssh to only allow keypair auth 
+## 4.8 Harden ssh to only allow keypair auth 
 Ensure you've already setup keypairs for both users. 
-```
+```zsh
 sudo nano /etc/ssh/sshd_config.d/00-disable-passwords.conf
 ```
 - Add the following to the 00-disable-passwords.conf file: 
-```
+```zsh
 PasswordAuthentication no
 PubkeyAuthentication yes
 ChallengeResponseAuthentication no
 PermitEmptyPasswords no
 ```
-### 4i. Modify tmux config for ez mode (like scrolling with your mouse or trackpad) 
-```
+
+## 4.9 Modify tmux config for ez mode (like scrolling with your mouse or trackpad) 
+```zsh
 nano ~/.tmux.conf
 ```
 - Add the following to the .tmux file:
-```
+```zsh
 # Enable mouse support (clicking and scrolling)
 set -g mouse on
 
@@ -153,7 +156,7 @@ setw -g pane-base-index 1
 set-option -g allow-rename off
 ```
 
-### 4j. sudo visudo  
+## 4.10 sudo visudo  
 - vi editor commands cheat sheet: 
   - press 'i'              *enter insert mode*
   - press '{esc} : q!'     *quit vi, without writing changes to the file*
@@ -162,43 +165,44 @@ set-option -g allow-rename off
   - press 'ZZ'             *while in Command Mode, no colon needed - Save and quit q*
     
 Add commands to the sudoer's file so your secondary LLM/AI user will be allowed to run some commands as root.
-```
+```zsh
 sudo visudo
 ```
 - Add the following to the end of the file, and replace *'lobster_user'* with your LLM/AI user's name: 
-```
+```zsh
 lobster_user ALL=(ALL) NOPASSWD: /usr/bin/powermetrics
 lobster_user ALL=(ALL) NOPASSWD: /opt/homebrew/bin/asitop
 lobster_user ALL=(ALL) NOPASSWD: /Users/lobster_user/.local/bin/uvx fluidtop
 ```
 
-### 4k. Install OpenClaw 🦞 
-```
+## 4.11 Install OpenClaw 🦞 
+```zsh
 curl -fsSL https://openclaw.ai/install.sh | bash
 ```
-As you go through the installer script: 
-- keep gemma4 as default
-- Enable 'command-logger' & 'session-memory'
+As you go through the installer script, keep gemma4 as default and enable 'command-logger' & 'session-memory'.
 
 ## 5. 🧑‍💻 Log out of your LLM/AI User and log into your Admin User again
 - **Remove Admin/Sudo from the LLM/AI User:** Now that everything is installed and running properly under the LLM/AI user, we will revoke the user's admin/sudo access. 
+
   - Remove Admin (settings > Users & Groups > *click 'i' next to LLM/AI user's name* and toggle off the "allow this user to administer this computer")
   - Reboot the system so these changes take effect.
   - Verify the LLM/AI user no longer has Admin privileges. 
 
 ## 6. 🤖 Login to LLM/AI User Account & Tell OpenClaw to Run a Security Audit
-```bash
+```zsh
 openclaw security audit --deep
 ```
 
 If you want to fix any issues that are found by the audit:
-```bash
+```zsh
 openclaw security audit --fix 
 ```
 
-## 7. 🔒 Hardening the OpenClaw Agent (Zero-Trust Deployment)
 
-You must treat an autonomous agent as **untrusted code execution**. By default, OpenClaw has the same permissions as your `LLM/AI` user. If the agent is "prompt injected" while reading a malicious file, email, or webpage, it could trick the system into running malicious commands and/or compromise the system. 
+### 7. 🔒 Hardening the OpenClaw Agent (Zero-Trust Deployment)
+
+You must treat an autonomous agent as **untrusted code execution**. By default, OpenClaw has the same permissions as your `LLM/AI` user. If the agent is "prompt 
+injected" while reading a malicious file, email, or webpage, it could trick the system into running malicious commands and/or compromise the system. 
 
 ### **Implement "Least Privilege" Command Filtering**
 OpenClaw’s `exec` tool is a powerful vector. Restrict it to a "Default Deny" posture by configuring an allow list of approved binaries.
@@ -222,15 +226,16 @@ tools:
       - "curl"      # Prevent direct exfiltration via CLI
       - "wget"      # Prevent direct exfiltration via CLI
 ```
-Modify the allow and deny list as needed. Any binary not listed should prompt you before executing. 
+Modify the allow and deny list as needed. Any binary not listed should prompt you before executing.
 
 ## 8. 🧦 SOC-Grade Security Monitoring 
-To achieve a stronger and more mature security posture, it is imperative to implement continuous telemetry monitoring of both host-level and network-layer activity. This dual-visibility approach remains the most effective methodology for identifying early Indicators of Compromise (IoCs) and mitigating potential security incidents.
+To achieve a stronger and more mature security posture, it is imperative to implement continuous telemetry monitoring of both host-level and network-layer activity. 
+This dual-visibility approach remains the most effective methodology for identifying early Indicators of Compromise (IoCs) and mitigating potential security incidents.
 
-- Host monitoring
+### Host Monitoring
   - Setup EDR and log forwarding agents, such as Elastic Agents, Wazuh, etc. 
 
-- Network monitoring 
+### Network Monitoring 
   - Setup port mirroring, and feed the mirrored network traffic into something like a Zeek/Bro sensor, or my personal favorite, a Security Onion sensor. 
 
 ## 📜 Quick Reference 
@@ -247,6 +252,7 @@ Common OpenClaw commands:
 - openclaw hooks enable <name>
 - openclaw hooks disable <name>
 - openclaw --help
+
 OpenClaw stores its files in a hidden folder ```~/.openclaw```
 
 Common ollama commands: 
@@ -255,32 +261,31 @@ Common ollama commands:
 - ollama pull <model_name>
 - ollama run <model_name>
 - ollama rm <model_name>
-Ollama stores models in a hidden folder ```~/.ollama/models```
 
 repomix: 
 - cd into repo's root and run 'repomix' - this will output a file to that can be fed to AI models
-```
+
 # Example feeding repomix-output to an AI model for analysis
-cat repomix-output.xml | ollama run qwen2.5-coder:7b "I have attached my repository in XML format. Please analyze the logic flow between the main entry script and the sub-modules."
-````
+```zsh
+cat repomix-output.xml | ollama run qwen2.5-coder:7b "I have attached my repository in XML format. Please analyze the logic flow between the main entry script and the 
+sub-modules."
+```
 
 OpenClaw Docs: 
-- https://docs.openclaw.ai/gateway/remote
-- https://docs.openclaw.ai/web/control-ui
+- [OpenClaw Gateway Remote](https://docs.openclaw.ai/gateway/remote)
+- [OpenClaw Web Control UI](https://docs.openclaw.ai/web/control-ui)
 
 OpenClaw FAQ: 
-- https://docs.openclaw.ai/start/faq
+- [OpenClaw Start FAQ](https://docs.openclaw.ai/start/faq)
 
 OpenClaw: 
-- https://docs.openclaw.ai/
+- [OpenClaw Documentation](https://docs.openclaw.ai/)
 
 ollama: 
-- https://ollama.com/
+- [ollama.com](https://ollama.com/)
 
 OhMyZsh: 
-- https://ohmyz.sh/
-
-##
+- [ohmyz.sh](https://ohmyz.sh/)
 
 ## AppleID Cleanup - *If you MUST use an existing user's account...*
 If you must use a previously used personal account for some reason, here are some basic cleanup steps. 
@@ -288,7 +293,8 @@ If you must use a previously used personal account for some reason, here are som
 - **⚠️ Log Out of Your AppleID and Cleanup Synced Data:** This will limit the impact if your system gets compromised, and the attack is able to elevate privileges. 
   - If you've ever logged into your AppleID using this account or any account on the system, log out. *(Settings > click on your AppleID > click Log Out)*
   - When promoted uncheck all the boxes to save cloud data locally. Delete all of your pictures, and personal data from your user's directories.
-  - Check you Keychain & Passwords app, and delete out any stored credentials, etc. that are not needed for your lab environment. *(!! Ensure you're logged out of your AppleID first so you don't delete/modify your synced Keychain)* 
+  - Check you Keychain & Passwords app, and delete out any stored credentials, etc. that are not needed for your lab environment. *(!! Ensure you're logged out of your AppleID 
+first so you don't delete/modify your synced Keychain)* 
   - Delete any synced iMessages or texts using the commands below. Replace the "{admin_user}" with your admin user's account name. 
  ```
 # Kill the background agents first so they don't lock the files
@@ -327,5 +333,6 @@ echo "{your_public_key}" >> authorized_keys
 ```
 Now you should be able to ssh into the system as the root user. *Assuming you've already allowed Remote Access on this system - step 3*
 
+*Note:* Don't forget to clean up other areas of your user profile - local files, browser files (browser history, cookies, etc.), and any other sensitive information you would 
+want to keep private.
 
-*Note:* Don't forget to clean up other areas of your user profile - local files, browser files (browser history, cookies, etc.), and any other sensitive information you would want to keep private. 
