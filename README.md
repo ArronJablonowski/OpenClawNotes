@@ -6,7 +6,7 @@
 This document provides a guide for setting up a dedicated, locally hosted, and security-hardened installation of OpenClaw on Apple Silicon hardware. 
 
  🎯 The Objective - I developed this guide for two primary reasons:
-- First, to personally explore OpenClaw as an AI Agent, and experiment with it's security. Given its reputation as a "high-risk" autonomous AI agent.  
+- First, to personally explore OpenClaw as an AI Agent, and experiment with it's security, given its reputation as a "high-risk" autonomous AI agent.  
 - Second, during my research into OpenClaw, I noted the prevalence of poor and generic security advice lacking depth. Consequently, I aimed to create a hands-on hardening guide that promotes higher security standards and implements security best practices to address common vulnerabilities and conceptual misunderstandings related to security.
 
 ##
