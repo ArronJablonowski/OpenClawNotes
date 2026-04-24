@@ -79,7 +79,7 @@ mkdir .ssh && cd .ssh && touch authorized_keys
 # put your public key pair into the authorized_keys file
 echo "{your_public_key}" >> authorized_keys
 ```
-Now you should be able to ssh into the system as the root user. 
+Now you should be able to ssh into the system as the root user. *Assuming you've already allowed Remote Access on this system - step 3 below*
 
 ## 3. 🛰️ Allow Remote Access
 - **Enable SSH** *(Settings > General > Sharing > Remote Login: toggle on)*
