@@ -39,7 +39,7 @@ Before proceeding it is important to isolate the OpenClaw system from the rest o
 
 ### 🛡️ Put the OpenClaw system on its own dedicated and isolated VLAN. 
 By enforcing strict network segmentation, this configuration mitigates the threat of internal pivoting and contains potential adversarial activity within the isolated network segment. 
-- *VLANs are outside the scope of this guide - google 'what is a VLAN' - or ask a cloud AI provider* 
+- *VLANs are outside the scope of this guide.*
 - *Isolation via Docker is not recommended as docker will cause a performance hit to the LLMs. (~10-20% slower)*
 
 ## 2. 🧑‍💻 Admin User Configuration 
