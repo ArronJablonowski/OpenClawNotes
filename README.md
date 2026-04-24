@@ -187,7 +187,7 @@ set-option -g allow-rename off
 ```
 
 ### 4j. sudo visudo  
-- vi commands: 
+- vi editor commands cheat sheet: 
   - press 'i'              *enter insert mode*
   - press '{esc} : q!'     *quit vi, without writing changes to the file*
   - press '{esc} : wq'     *write the changes, and then quit vi*
