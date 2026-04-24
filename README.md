@@ -30,7 +30,7 @@ Before proceeding it is important to isolate the OpenClaw system from the rest o
 
 ### 🛡️ Put the OpenClaw system on its own dedicated and isolated VLAN. 
 - *VLANs are outside the scope of this guide - google 'what is a VLAN' - or ask a cloud AI provider* 
-- *Isolation via Docker is not recommended as docker will cause a performace hit to the LLMs. (10-20% slower)*
+- *Isolation via Docker is not recommended as docker will cause a performace hit to the LLMs. (~10-20% slower)*
 
 ## 2. 🧑‍💻 Admin User Configuration 
 - **Make an Admin User:** This account will be used to run admin tasks only, and NOT LLMs. 
