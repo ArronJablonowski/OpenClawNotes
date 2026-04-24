@@ -5,7 +5,7 @@
 
 This document provides a step-by-step guide for establishing a dedicated, *mostly* secure, local installation of OpenClaw on an Apple M-series system. 
 
- 🎯 The Objective: I developed this guide for two primary reasons:
+ 🎯 The Objective - I developed this guide for two primary reasons:
 - First, to personally explore OpenClaw as an AI Agent. Given its reputation as a "Security Nightmare" according to platforms like Google Gemini and some cybersecurity outlets/experts.
 - Second, during my research into OpenClaw, I noted the prevalence of poor and generic security advice lacking depth. Consequently, I aimed to create a hands-on hardening guide that establishes higher security standards and implements security best practices to address common vulnerabilities and address some conceptual misunderstandings related to security.
 
