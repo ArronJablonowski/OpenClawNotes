@@ -184,7 +184,7 @@ If you want to fix any issues that are found by the audit:
 openclaw security audit --fix 
 ```
 
-## 🔒 7. SOC-Grade Hardening of OpenClaw (Zero-Trust Deployment)
+## 🔒 7. Hardening the OpenClaw Agent (Zero-Trust Deployment)
 
 As a security professional, you must treat an autonomous agent as **untrusted code execution**. By default, OpenClaw has the same permissions as your `LLM/AI` user. If the agent is "prompt injected" while reading a malicious file or webpage, it could trick the system into running malicious commands or compromise the system. 
 
@@ -211,6 +211,10 @@ tools:
       - "wget"      # Prevent direct exfiltration via CLI
 ```
 Modify the allow and deny list as needed. 
+
+<!--- 
+## 🔒 8. SOC-Grade Hardening 
+---> 
 
 ## 📜 Quick Reference 
 - OpenClaw Gateway: 127.0.0.1:18789 
