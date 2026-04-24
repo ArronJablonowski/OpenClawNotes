@@ -20,7 +20,7 @@ The biggest immediate risk to your OpenClaw is the supply chain. Since OpenClaw 
 Don't let your environment auto-update itself into a compromise.
 - Version Pinning: If you are using npm to install skill dependencies, use the --save-exact flag. This prevents npm install from pulling in a "minor update" that might actually be a malicious injection (like the Axios compromise of early 2026).
 - Manual Audits: Before running a new skill, run npm audit inside the skill's directory.
-``` cd ~/.openclaw && npm audit && npm list --depth=0 ```
+``` cd ~/.openclaw/skills/ && npm audit && npm list --depth=0 ```
 
 ### ⚠️ Command Injection Vulnerabilities 
 In OpenClaw, command injection isn't just a coding bug; it’s an architectural risk known as the Lethal Trifecta. 
