@@ -142,7 +142,7 @@ nano ~/.zshrc
 ```
 - Add the following to the end of the .zshrc file:
 ```
-# This function prepends the 'Brain' emoji (🧠) to the prompt for security awareness.
+# This function prepends the 'Brain' emoji (🧠) to the prompt for visual awareness.
 preprompt_brain() {
     # \e[33m is the ANSI code for yellow/amber, making it noticeable.
     echo -e "\e[33m🧠\e[0m " 
