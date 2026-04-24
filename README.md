@@ -45,9 +45,8 @@ Before proceeding it is important to isolate the OpenClaw system from the rest o
   - Setup SSH key pairs for the admin user.
 
 ## 4. 🤖 LLM / AI User Configuration
-- **Create a secondary User Account** with (*temporary*) admin privileges. 
+- **Create a secondary User Account** with (*temporary*) admin privileges *(Settings > Users & Groups > Add User)*
   - *Note: Admin rights will be removed after tool installation for security/least privilege.*
-  - Settings > Users & Groups > Add User
 - Now log into the new secondary account; skip Apple ID sign-in for security/privacy.
   - *Note: The following installs and commands will happen under this secondary account.*
 - Change the **Desktop Background** to a distinct color/image as a visual cue for AI-specific environment.
