@@ -33,7 +33,7 @@ Before proceeding it is important to isolate the OpenClaw system from the rest o
 - *Isolation via Docker is not recommended as docker will cause a performance hit to the LLMs. (~10-20% slower)*
 
 ## 2. 🧑‍💻 Admin User Configuration 
-It is best practice to make a brand new admin account, and entirely delete out any prior personal use accounts from the system.
+Unless you have a fresh, new, and unused system, it is best practice to make a brand new admin account, and then delete out any prior personal use accounts from the system entirely.
 
 - **Make an Admin User:** This account will be used to run admin tasks only, and NOT LLMs.
   - Set a static (fixed) IP address.    
