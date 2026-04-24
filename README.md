@@ -45,7 +45,9 @@ Before proceeding it is important to isolate the OpenClaw system from the rest o
   - Delete any synced iMessages or texts using the commands below.
  ```
 # Kill the background agents first so they don't lock the files
-killall -9 IMDPersistenceAgent 2>/dev/null && killall -9 identityservicesd 2>/dev/null && killall -9 Messages 2>/dev/null
+killall -9 IMDPersistenceAgent 2>/dev/null
+killall -9 identityservicesd 2>/dev/null
+killall -9 Messages 2>/dev/null
 
 # Wipe the primary database and sync logic
 rm -rf /Users/arron/Library/Messages/chat.db*
