@@ -230,14 +230,11 @@ tools:
 Modify the allow and deny list as needed. Any binary not listed should prompt you before executing.
 
 ## 8. 🧦 SOC-Grade Security Monitoring 
-To achieve a stronger and more mature security posture, it is imperative to implement continuous telemetry monitoring of both host-level and network-layer activity. 
-This dual-visibility approach remains the most effective methodology for identifying early Indicators of Compromise (IoCs) and mitigating potential security incidents.
+To achieve a resilient SOC-Grade security posture, it is essential to implement comprehensive telemetry monitoring across both host and network layers. This dual-visibility framework provides the necessary context to identify early Indicators of Compromise (IoCs) and facilitates rapid incident containment.
 
-### Host Monitoring
-  - Setup EDR and log forwarding agents, such as Elastic Agents, Wazuh, etc. 
+   - Endpoint Observability: Deploy enterprise-grade EDR and log-forwarding solutions—such as Wazuh *(free)* or Elastic Agent *(also free)* to capture granular process-level telemetry and system events.
 
-### Network Monitoring 
-  - Setup port mirroring, and feed the mirrored network traffic into something like a Zeek/Bro sensor, or my personal favorite, a Security Onion sensor. 
+   - Network Traffic Analysis (NTA): Utilize port mirroring (SPAN/TAP) to ingest raw traffic into a high-fidelity sensor. Implementing a Security Onion or Zeek instance allows for deep packet inspection and automated protocol analysis." 
 
 ## 📜 Quick Reference 
 - Default OpenClaw Gateway: 127.0.0.1:18789 
