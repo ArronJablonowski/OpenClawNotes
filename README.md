@@ -52,7 +52,7 @@ In this configuration, your ISP router acts as the "Base," and your two personal
 ### 🚨 The Risks with using NAT in a Y Configuration as Network Segmentation 🚨
 - **The "Upstream" Exposure:** Both routers see the ISP router's network as the "Internet" (WAN). If an AI agent in your Lab network is compromised, it can still scan the ISP router’s subnet. If you have a printer or a guest laptop connected directly to the ISP router, the Lab agent can see and attack them because they are "upstream."
 - **Double NAT Issues:** Running two routers deep can cause "Double NAT," which breaks certain types of traffic like VOIP, online gaming, and some VPNs
-- **The "Admin Page" Risk:** By default, Router B and Router C can both "see" the login page of the ISP Router. If a malicious agent gains access to your Lab router, it might try to brute-force the ISP router to gain control of the entire house
+- **The ISP Router's "Admin Page" Risk:** By default, Router B and Router C can both "see" the login page of the ISP Router. If a malicious AI agent gains access to your Lab router/network, it might try to brute-force the ISP router to gain control of the entire network.
 
 ![alt text](https://github.com/ArronJablonowski/OpenClawNotes/blob/main/img/Y_Networking_Diagram_small.png)
 
