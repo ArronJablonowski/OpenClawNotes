@@ -225,9 +225,9 @@ injected" while reading a malicious file, email, or webpage, it could trick the 
 ### **Implement "Least Privilege" Command Filtering**
 OpenClaw’s `exec` tool is a powerful vector. Restrict it to a "Default Deny" posture by configuring an allow list of approved binaries.
 
-1. Edit your tool policy: `nano ~/.openclaw/config.yaml`
+1. Edit your tool policy: `nano ~/.openclaw/openclaw.json`
 2. Update the `tools.exec` section:
-```yaml
+```json
 tools:
   exec:
     security: "allowlist" # Changes from 'full' to 'allowlist'
