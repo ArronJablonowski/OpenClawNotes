@@ -28,6 +28,8 @@ In OpenClaw, command injection isn't just a coding bug; it’s an architectural 
 
 **🕸️ Potential Spread:** Without proper network segmentation, a compromised OpenClaw instance may be leveraged as a pivot point for unauthorized access to other internal network devices and network-attached storage.
 
+##
+
 ## 🧪 OpenClaw Setup Recommendations for Securing a Locally Hosted AI Lab Environment 🧪
 
 ## 1. 📡 Network Segmentation & Isolation - 💣 *The Blast Radius Control*  💣
