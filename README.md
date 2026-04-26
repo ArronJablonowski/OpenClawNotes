@@ -49,7 +49,7 @@ In this configuration, your ISP router acts as the "Base," and your two personal
 
 **NAT as a Firewall:** Consumer routers use Network Address Translation (NAT). By default, NAT allows outgoing requests but blocks all incoming requests. A device in the Lab network cannot initiate a connection to a device in the Personal network because the Personal Router's firewall will see it as "unsolicited traffic" from the outside and drop it.
 
-## The Risks with using NAT in a Y Configuration as Network Segmentation 
+### 🚨 The Risks with using NAT in a Y Configuration as Network Segmentation 🚨
 - **The "Upstream" Exposure (The Loophole):** Both routers see the ISP router's network as the "Internet" (WAN). If an AI agent in your Lab network is compromised, it can still scan the ISP router’s subnet. If you have a printer or a guest laptop plugged directly into the ISP router, the Lab agent can see and attack them because they are "upstream."
 - **Double NAT Issues:** Running two routers deep can cause "Double NAT," which breaks certain types of traffic like VOIP, online gaming, and some VPNs
 - **The "Admin Page" Risk:** By default, Router B and Router C can both "see" the login page of the ISP Router. If a malicious agent gains access to your Lab router, it might try to brute-force the ISP router to gain control of the entire house
