@@ -34,12 +34,25 @@ In OpenClaw, command injection isn't just a coding bug; it’s an architectural 
 Before proceeding, it is important to isolate the OpenClaw system from the rest of the LAN (local area network). This helps mitigate the threat of internal pivoting 
 and contains potential adversarial activity within the isolated network segment.
 
+## Option A. - Network Segmentation the Proper Way - VLANs
 ### 🛡️ Put the OpenClaw system on its own dedicated and isolated VLAN. 
 By enforcing strict network segmentation, this configuration mitigates the threat of internal pivoting and contains potential adversarial activity within the isolated 
 network segment. 
 - **VLAN setup and creation is outside the scope of this guide.**
   - The implementation of Virtual LANs (VLANs) typically requires dedicated, prosumer-grade firewall hardware, such as those offered by UniFi or pfSense/Netgate, due to the complex Layer 2 and Layer 3 traffic management involved.
 - **Isolation via Docker is not recommended as docker will cause a performance hit to the LLMs. (~10-20% slower)**
+
+## Option B. - Network Segmentation the Cheap & Easy Way - NAT in a Y Configuration 
+In this configuration, your ISP router acts as the "Base," and your two personal routers (Lab and Personal) are plugged into its LAN ports.
+
+**NAT as a Firewall:** Consumer routers use Network Address Translation (NAT). By default, NAT allows outgoing requests but blocks all incoming requests. A device in the Lab network cannot initiate a connection to a device in the Personal network because the Personal Router's firewall will see it as "unsolicited traffic" from the outside and drop it.
+
+## The Risks with using NAT in a Y Configuration as Network Segmentation 
+- **The "Upstream" Exposure (The Loophole):** Both routers see the ISP router's network as the "Internet" (WAN). If an AI agent in your Lab network is compromised, it can still scan the ISP router’s subnet. If you have a printer or a guest laptop plugged directly into the ISP router, the Lab agent can see and attack them because they are "upstream."
+- **Double NAT Issues:** Running two routers deep can cause "Double NAT," which breaks certain types of traffic like VOIP, online gaming, and some VPNs
+- **The "Admin Page" Risk:** By default, Router B and Router C can both "see" the login page of the ISP Router. If a malicious agent gains access to your Lab router, it might try to brute-force the ISP router to gain control of the entire house
+
+{image}
 
 ## 2. 🧑‍💻 Admin User Creation
 If the system has been used for personal use, create a brand new admin account and delete any prior personal use accounts from the system entirely. Best practice would 
