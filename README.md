@@ -45,7 +45,7 @@ network segment.
 - **Isolation via Docker is not recommended as docker will cause a performance hit to the LLMs. (~10-20% slower)**
 
 ## ( Option B ) - Network Segmentation the Cheap & Easy Way - NAT in a Y Configuration 
-In this configuration, your ISP router acts as the "Base," and your two personal routers (Lab and Personal) are plugged into its LAN ports.
+In this configuration, your ISP router acts as the "Base," and your two personal routers (Lab and Personal) are plugged into the ISP router's LAN ports.
 
 **NAT as a Firewall:** Consumer routers use Network Address Translation (NAT). By default, NAT allows outgoing requests but blocks all incoming requests. A device in the Lab network cannot initiate a connection to a device in the Personal network because the Personal Router's firewall will see it as "unsolicited traffic" from the outside and drop it.
 
