@@ -36,7 +36,7 @@ In OpenClaw, command injection isn't just a coding bug; it’s an architectural 
 Before proceeding, it is important to isolate the OpenClaw system from the rest of the LAN (local area network). This helps mitigate the threat of internal pivoting 
 and contains potential adversarial activity within the isolated network segment.
 
-## ( Option A ) - Network Segmentation the Proper Way - VLANs
+### ( Option A ) - Network Segmentation the Proper Way - VLANs
 ### 🛡️ Put the OpenClaw system on its own dedicated and isolated VLAN. 
 By enforcing strict network segmentation, this configuration mitigates the threat of internal pivoting and contains potential adversarial activity within the isolated 
 network segment. 
@@ -44,7 +44,7 @@ network segment.
   - The implementation of Virtual LANs (VLANs) typically requires dedicated, prosumer-grade firewall hardware, such as those offered by UniFi or pfSense/Netgate, due to the complex Layer 2 and Layer 3 traffic management involved.
 - **Isolation via Docker is not recommended as docker will cause a performance hit to the LLMs. (~10-20% slower)**
 
-## ( Option B ) - Network Segmentation the Cheap & Easy Way - NAT in a Y Configuration 
+### ( Option B ) - Network Segmentation the Cheap & Easy Way - NAT in a Y Configuration 
 In this configuration, your ISP router acts as the "Base," and your two personal routers (Lab and Personal) are plugged into the ISP router's LAN ports.
 
 **NAT as a Firewall:** Consumer routers use Network Address Translation (NAT). By default, NAT allows outgoing requests but blocks all incoming requests. A device in the Lab network cannot initiate a connection to a device in the Personal network because the Personal Router's firewall will see it as "unsolicited traffic" from the outside and drop it.
