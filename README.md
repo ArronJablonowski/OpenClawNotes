@@ -228,21 +228,26 @@ OpenClaw’s `exec` tool is a powerful vector. Restrict it to a "Default Deny" p
 1. Edit your tool policy: `nano ~/.openclaw/openclaw.json`
 2. Update the `tools.exec` section:
 ```json
-tools:
-  exec:
-    security: "allowlist" # Changes from 'full' to 'allowlist'
-    ask: "on-miss"       # Prompt you if it tries a command not on the list
-    allow:
-      - "git"
-      - "repomix"
-      - "ls"
-      - "cat"
-      - "python3"
-    deny:
-      - "brew"      # Never allow the agent to install software
-      - "sudo"      # Absolute restriction 
-      - "curl"      # Prevent direct exfiltration via CLI
-      - "wget"      # Prevent direct exfiltration via CLI
+{
+  "tools": {
+    "exec": {
+      "host": "gateway",
+      "security": "allowlist",   // Options: "allowlist", "deny", or "full"
+      "ask": "on-miss",          // Options: "always", "on-miss", or "off"
+      "allowlist": [
+        "/opt/homebrew/bin/rg",
+        "/usr/bin/git",
+        "/usr/local/bin/birtha*", // Wildcards are supported for your framework
+        "/usr/bin/curl"
+      ],
+      "deny": [
+        "sudo",
+        "rm",
+        "chmod"
+      ]
+    }
+  }
+}
 ```
 Modify the allow and deny list as needed. Any binary not listed should prompt you before executing.
 
