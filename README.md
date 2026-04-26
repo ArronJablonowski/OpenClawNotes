@@ -44,6 +44,8 @@ network segment.
   - The implementation of Virtual LANs (VLANs) typically requires dedicated, prosumer-grade firewall hardware, such as those offered by UniFi or pfSense/Netgate, due to the complex Layer 2 and Layer 3 traffic management involved.
 - **Isolation via Docker is not recommended as docker will cause a performance hit to the LLMs. (~10-20% slower)**
 
+##
+
 ### ( Option B ) - Network Segmentation the Cheap & Easy Way - NAT in a Y Configuration 
 In this configuration, your ISP router acts as the "Base," and your two personal routers (Lab and Personal) are plugged into the ISP router's LAN ports.
 
