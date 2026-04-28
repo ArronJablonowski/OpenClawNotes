@@ -381,3 +381,12 @@ Now you should be able to ssh into the system as the root user. *Assuming you've
 *Note:* Don't forget to clean up other areas of your user profile - local files, browser files (browser history, cookies, etc.), and any other sensitive information you would 
 want to keep private.
 
+# How to Uninstall OpenClaw 
+```zsh
+openclaw uninstall --all --yes
+launchctl bootout gui/$UID/ai.openclaw.gateway
+npm rm -g openclaw
+pnpm remove -g openclaw
+rm -rf ~/.openclaw
+rm -f ~/Library/LaunchAgents/ai.openclaw.gateway.plist
+```
