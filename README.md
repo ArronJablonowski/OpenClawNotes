@@ -86,15 +86,17 @@ automatically after a power failure should be turned on)*
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-- Pay attention to the commands that Homebrew asks you to run once the install completes. It will look something like the following: 
+- Pay attention to the commands that Homebrew asks you to run once the install completes.
+- It will look something like the following: 
 ```zsh
-echo >> ~/.zprofile
-{get commands from system.. }
+    echo >> ~/.zprofile
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv zsh)"' >> ~/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv zsh)"
 ```
 
 ## 4.2 Install Brew Utilities
 ```zsh
-brew install git python3 node htop tmux
+brew install git python3 node htop tmux p7zip
 brew install ollama
 brew services start ollama
 brew install --cask obsidian
