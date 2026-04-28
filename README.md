@@ -102,9 +102,6 @@ brew install asitop
 brew install repomix
 ```
 
-
-
-
 ## 4.3 Install Stats to Monitor System Temps
 ```zsh
 mkdir ~/Applications && brew install --cask --appdir=~/Applications stats
@@ -117,8 +114,6 @@ brew install --cask macs-fan-control
 ```
 - *Open Mac Fan Control in the GUI.*
 
-
-
 ## 4.5 Pull Gemma4 / or another LLM to act as the brain for OpenClaw 
 *Please note the LLM used should be compatible with the hardware you're running it on. If Gemma4 is not compatible, please choose a model that works for your hardware. Ask Gemini, etc. which model is best for your hardware if you're unsure.*
 ```zsh
@@ -128,15 +123,9 @@ ollama pull gemma4
 ```zsh
 ollama run gemma4 "Tell me a joke."
 ```
-*You should see it thinking, and then it give you some ("joke") output.* 
+ - *You should see it thinking, and then it give you some ("joke") output.* 
 
-
-
-
-
-
-
-## 4.7 Modify the Terminal's Prompt 
+## 4.6 Modify the Terminal's Prompt 
 This will be a visual cue to help identify when you're in the LLM/AI user's terminal, and help prevent entering commands into the wrong terminal window. 
 ```zsh
 nano ~/.zshrc
@@ -158,7 +147,7 @@ precmd() {
 source ~/.zshrc
 ```
 
-## 4.8 Harden ssh to only allow keypair auth 
+## 4.7 Harden ssh to only allow keypair auth 
 Ensure you've already setup keypairs for both users. 
 ```zsh
 sudo nano /etc/ssh/sshd_config.d/00-disable-passwords.conf
@@ -171,7 +160,7 @@ ChallengeResponseAuthentication no
 PermitEmptyPasswords no
 ```
 
-## 4.9 Modify tmux config for ez mode (like scrolling with your mouse or trackpad) 
+## 4.8 Modify tmux config for ez mode (like scrolling with your mouse or trackpad) 
 ```zsh
 nano ~/.tmux.conf
 ```
@@ -188,7 +177,7 @@ setw -g pane-base-index 1
 set-option -g allow-rename off
 ```
 
-## 4.10 sudo visudo  
+## 4.9 sudo visudo  
 - vi editor commands cheat sheet: 
   - press 'i'              *enter insert mode*
   - press '{esc} : q!'     *quit vi, without writing changes to the file*
@@ -207,7 +196,7 @@ lobster_user ALL=(ALL) NOPASSWD: /opt/homebrew/bin/asitop
 lobster_user ALL=(ALL) NOPASSWD: /Users/lobster_user/.local/bin/uvx fluidtop
 ```
 
-## 4.11 Install OpenClaw 🦞 
+## 4.10 Install OpenClaw 🦞 
 ```zsh
 curl -fsSL https://openclaw.ai/install.sh | bash
 ```
