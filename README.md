@@ -124,6 +124,12 @@ mkdir ~/Applications && brew install --cask --appdir=~/Applications stats
 brew install --cask macs-fan-control
 ```
 - *Open Mac Fan Control in the GUI.*
+- Set Exhaust control to Custom > Select "Sensor-based value" > CPU Core Average
+    - Set Temperature that the fan speed will start to increse from to 50c
+    - Set Maximum temperature to 75c. This will spin up the fan before the Mac starts getting too hot.
+- Click Preferences
+    - Under 'General' > select all 3 options *(Autostart minimized..., Check for updates..., Show icon in dock)*
+    - Under 'Menu bar display' > Set - Icon:Monochrome, Fan:Exhaust, Sensor:CPU Core Average 
 
 ## 4.5 Pull Gemma4 / or another LLM to act as the brain for OpenClaw 
 *Please note the LLM used should be compatible with the hardware you're running it on. If Gemma4 is not compatible, please choose a model that works for your hardware. Ask Gemini, etc. which model is best for your hardware if you're unsure.*
