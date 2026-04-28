@@ -113,7 +113,7 @@ mkdir ~/Applications && brew install --cask --appdir=~/Applications stats
     - Click CPU > Ensure the top right toggle is on 
     - Click GPU > Ensure the top right toggle is on
     - Click RAM > Ensure the top right toggle is on
-    - Click "Sensors" (on the left) > Select "Hottest CPU" & "Hottest GPU"
+    - Click Sensors > Toggle "Hottest CPU" & "Hottest GPU" on
 
 ## 4.4 Install Mac Fan Control 
 ```zsh
