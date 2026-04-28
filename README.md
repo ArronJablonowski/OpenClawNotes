@@ -81,19 +81,13 @@ automatically after a power failure should be turned on)*
 - Now log into the new **secondary account** via the GUI; skip Apple ID sign-in for security and privacy.
   - *Note: The following installs and commands will happen under this secondary account.*
 
-## 4.1 Install Oh My Zsh - Shell Extension 
-```sh
-# Install Oh My Zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-## 4.2 Install Homebrew - Package Manager 
+## 4.1 Install Homebrew - Package Manager 
 ```bash
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-## 4.3 Install Brew Utilities
+## 4.2 Install Brew Utilities
 ```zsh
 brew install git python3 node htop tmux
 brew install ollama
@@ -101,6 +95,12 @@ brew services start ollama
 brew install --cask obsidian
 brew install asitop
 brew install repomix
+```
+
+## 4.3 Pull Gemma4 / or another LLM to act as the brain for OpenClaw 
+*Please note the LLM used should be compatible with the hardware you're running it on. If Gemma4 is not compatible, please choose a model that works for your hardware. Ask Gemini, etc. which model is best for your hardware if you're unsure.*
+```zsh
+ollama pull gemma4
 ```
 
 ## 4.4 Install Stats to Monitor System Temps
@@ -306,6 +306,19 @@ ollama:
 
 OhMyZsh: 
 - [ohmyz.sh](https://ohmyz.sh/)
+
+##
+
+# Optinal Extras 
+
+## Install Oh My Zsh - Shell Extension 
+Oh My Zsh simplifies the process of customizing your terminal by providing over 300 optional plugins for tools like Git and Docker, along with 150+ visual themes. Essentially, it transforms a plain command-line interface into a more powerful, user-friendly environment with features like advanced tab completion and syntax highlighting.
+```sh
+# Install Oh My Zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+##
 
 ## AppleID Cleanup - *If you MUST use an existing user's account...*
 If you must use a previously used personal account for some reason, here are some basic cleanup steps. 
