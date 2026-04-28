@@ -86,6 +86,11 @@ automatically after a power failure should be turned on)*
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
+Pay attention to the commands that Homebrew asks you to run once the install completes. It will look something like the following: 
+```zsh
+echo >> ~/.zprofile
+{get commands from system.. }
+```
 
 ## 4.2 Install Brew Utilities
 ```zsh
