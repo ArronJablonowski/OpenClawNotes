@@ -63,8 +63,8 @@ be to fully re-image/reload MacOS for a fresh system.
 
 - **Make an Admin User:** This account will be used to run admin tasks only, and NOT LLMs.
   - Login to the new account via the GUI and go through the initial setup screens. DO NOT sign into your AppleID. Skip it. 
-  - Set a static (fixed) IP address.    
-  - Disable rotating MAC if using a DHCP lease and WiFi *(Settings > Network > WiFi > SSID's (...) > Network Settings > Private WiFi address > Set to: "Fixed")*
+  - Set a static (fixed) IP address. *ie. Setup a DHCP resevation, etc.*
+  - Disable rotating MAC if using a DHCP lease and WiFi *(Settings > Network > WiFi > SSID's (...) > Network Settings > Private WiFi address > Set to: "Fixed")* Toggle off "Limit IP address Tracking", and click 'OK'. Then toggle off WiFi, and toggle it back on to access "Private Wi-Fi Address", and set it to 'Fixed'. 
   - Set Screen timeout *(Settings > Lock Screen)*
   - Set Energy settings *(Settings > Energy: -- turn low power mode off -- prevent automatic sleeping when the display is off should be turned on -- Start up 
 automatically after a power failure should be turned on)*
