@@ -78,6 +78,7 @@ automatically after a power failure should be turned on)*
 ## 4. 🤖 LLM / AI User Creation
 - **Create a secondary User Account** with (*temporary*) admin privileges *(Settings > Users & Groups > Add User)*
   - *Note: Admin rights will be removed after tool installation for security / principle of least privilege.*
+  - Reboot once 'Admin' priveleges have been granted to the new LLM / AI user to allow the permissions to be granted. 
 - Now log into the new **secondary account** via the GUI; skip Apple ID sign-in for security and privacy.
   - *Note: The following installs and commands will happen under this secondary account.*
 
