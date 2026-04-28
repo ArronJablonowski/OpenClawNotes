@@ -102,30 +102,39 @@ brew install asitop
 brew install repomix
 ```
 
-## 4.3 Pull Gemma4 / or another LLM to act as the brain for OpenClaw 
-*Please note the LLM used should be compatible with the hardware you're running it on. If Gemma4 is not compatible, please choose a model that works for your hardware. Ask Gemini, etc. which model is best for your hardware if you're unsure.*
-```zsh
-ollama pull gemma4
-```
 
-## 4.4 Install Stats to Monitor System Temps
+
+
+## 4.3 Install Stats to Monitor System Temps
 ```zsh
 mkdir ~/Applications && brew install --cask --appdir=~/Applications stats
 ```
 - *Open Stats in the GUI.*
 
-## 4.5 Install Mac Fan Control 
+## 4.4 Install Mac Fan Control 
 ```zsh
 brew install --cask macs-fan-control
 ```
 - *Open Mac Fan Control in the GUI.*
 
-## 4.6 Install 'uv' and fluidtop to Monitor Performance
-```zsh 
-curl -LsSf https://astral.sh/uv/install.sh | sh
-source $HOME/.local/bin/env sh, bash, zsh
-sudo uvx fluidtop
+
+
+## 4.5 Pull Gemma4 / or another LLM to act as the brain for OpenClaw 
+*Please note the LLM used should be compatible with the hardware you're running it on. If Gemma4 is not compatible, please choose a model that works for your hardware. Ask Gemini, etc. which model is best for your hardware if you're unsure.*
+```zsh
+ollama pull gemma4
 ```
+- Test ollama/gemma4 
+```zsh
+ollama run gemma4 "Tell me a joke."
+```
+*You should see it thinking, and then it give you some ("joke") output.* 
+
+
+
+
+
+
 
 ## 4.7 Modify the Terminal's Prompt 
 This will be a visual cue to help identify when you're in the LLM/AI user's terminal, and help prevent entering commands into the wrong terminal window. 
@@ -321,6 +330,14 @@ Oh My Zsh simplifies the process of customizing your terminal by providing over 
 ```sh
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+## Install 'uv' and fluidtop to Monitor Performance
+```zsh 
+curl -LsSf https://astral.sh/uv/install.sh | sh
+source $HOME/.local/bin/env sh, bash, zsh
+uv tool install fluidtop
+sudo uvx fluidtop
 ```
 
 ##
