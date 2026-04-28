@@ -275,6 +275,9 @@ Common OpenClaw commands:
 - openclaw hooks list 
 - openclaw hooks enable <name>
 - openclaw hooks disable <name>
+- openclaw models status 
+- openclaw models set ollama/gemma4
+- openclaw gateway restart 
 - openclaw --help
 
 OpenClaw stores its files in a hidden folder ```~/.openclaw```
