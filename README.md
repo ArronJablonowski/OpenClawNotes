@@ -95,7 +95,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 ## 4.3 Install Brew Utilities
 ```zsh
-brew install git node htop tmux
+brew install git python3 node htop tmux
 brew install ollama
 brew services start ollama
 brew install --cask obsidian
