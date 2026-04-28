@@ -299,6 +299,7 @@ sub-modules."
 ```
 
 OpenClaw Docs: 
+- [OpenClaw Gateway Security](https://docs.openclaw.ai/gateway/security)
 - [OpenClaw Gateway Remote](https://docs.openclaw.ai/gateway/remote)
 - [OpenClaw Web Control UI](https://docs.openclaw.ai/web/control-ui)
 
