@@ -36,6 +36,8 @@ In OpenClaw, command injection isn't just a coding bug; it’s an architectural 
 Before proceeding, it is important to isolate the OpenClaw system from the rest of the LAN (local area network). This helps mitigate the threat of internal pivoting 
 and contains potential adversarial activity within the isolated network segment.
 
+##
+
 ### ( Option A ) - Network Segmentation the Proper Way - VLANs
 ### 🛡️ Put the OpenClaw system on its own dedicated and isolated VLAN. 
 By enforcing strict network segmentation, this configuration mitigates the threat of internal pivoting and contains potential adversarial activity within the isolated 
