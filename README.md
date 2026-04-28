@@ -96,12 +96,10 @@ automatically after a power failure should be turned on)*
 
 ## 4.2 Install Brew Utilities
 ```zsh
-brew install git python3 node htop tmux p7zip
+brew install git python3 node htop tmux p7zip asitop repomix
 brew install ollama
 brew services start ollama
 brew install --cask obsidian
-brew install asitop
-brew install repomix
 ```
 
 ## 4.3 Install Stats to Monitor System Temps
