@@ -135,8 +135,8 @@ nano ~/.zshrc
 ```zsh
 # This function prepends the 'Brain' emoji (🧠) to the prompt for a visual cue/awareness.
 preprompt_brain() {
-    # \e[33m is the ANSI code for yellow/amber, making it noticeable.
-    echo -e "\e[33m🧠\e[0m " 
+    # Emoji goes here: 
+    echo -e "🧠 " 
 }
 # Hook the function into the Zsh prompt drawing routine.
 precmd() {
