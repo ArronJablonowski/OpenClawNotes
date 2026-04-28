@@ -123,7 +123,8 @@ ollama pull gemma4
 ```zsh
 ollama run gemma4 "Tell me a joke."
 ```
- - *You should see it thinking, and then it give you some ("joke") output.* 
+ - *You should see it thinking, and then it should give you some ("joke") output.*
+ - *If you see output, then ollama/gemma4 is working.*
 
 ## 4.6 Modify the Terminal's Prompt 
 This will be a visual cue to help identify when you're in the LLM/AI user's terminal, and help prevent entering commands into the wrong terminal window. 
