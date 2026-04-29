@@ -107,29 +107,29 @@ brew services start ollama
 mkdir ~/Applications && brew install --cask --appdir=~/Applications stats
 ```
 - *Open Stats in the GUI.* (command + spacebar > type: 'Stats')
-- Tell Stats to "Start the application automatically when starting your Mac" 
-- Select "Do everything siliently in the background." 
-- Click the (new) stats that appeared in Mac's top bar, and then click the Gear icon to access Stats Settings. 
-    - Click CPU > Ensure the top right toggle is on 
-    - Click GPU > Ensure the top right toggle is on
-    - Click RAM > Ensure the top right toggle is on
-    - Click Sensors > Toggle "Hottest CPU" & "Hottest GPU" on
+- Durring initial setup - tell Stats to "Start the application automatically when starting your Mac" 
+- Durring initial setup - Select "Do everything siliently in the background." 
+- Click on the (new) stats that appeared in Mac's top bar, and then click the Gear icon to access Stats Settings. 
+    - Click 'CPU' > Ensure the top right toggle is on 
+    - Click 'GPU' > Ensure the top right toggle is on
+    - Click 'RAM' > Ensure the top right toggle is on
+    - Click 'Sensors' > Toggle "Hottest CPU" & "Hottest GPU" on
 - Click Gear icon in Settings Window (lower left)
     - Set Tempature to Celsius
     - Toggle on "Show icon in dock"
     - Toggle on **"Start at login"** if not already set. 
 
-## 4.4 Install Mac Fan Control 
+## 4.4 Install Mac Fan Control *(if your Mac has a fan)*
 ```zsh
 brew install --cask macs-fan-control
 ```
 - *Open Mac Fan Control in the GUI.* (command + spacebar > type: 'Fan')
 - Set Exhaust control to Custom > Select "Sensor-based value" > CPU Core Average
-    - Set Temperature that the fan speed will start to increse from to 50c
+    - Set Temperature, that the fan speed will start to increse from to 50c
     - Set Maximum temperature to 75c. This will spin up the fan before the Mac starts getting too hot.
 - Click Preferences
     - Under 'General' > select all 3 options *(Autostart minimized..., Check for updates..., Show icon in dock)*
-    - Under 'Menu bar display' > Set - Icon:Monochrome, Fan:Exhaust, Sensor:CPU Core Average 
+    - Under 'Menu bar display' > Set -- Icon:Monochrome, Fan:Exhaust, Sensor:CPU Core Average 
 
 ## 4.5 Pull Gemma4 / or another LLM to act as the brain for OpenClaw 
 *Please note the LLM used should be compatible with the hardware you're running it on. If Gemma4 is not compatible, please choose a model that works for your hardware. Ask Gemini, etc. which model is best for your hardware if you're unsure.*
