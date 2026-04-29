@@ -270,7 +270,7 @@ OpenClaw’s `exec` tool is a powerful vector. Restrict it to a "Default Deny" p
 ```
 Modify the allow and deny list as needed. Any binary not listed should prompt you before executing.
 
-## ( Option B ) - Install the Hermes Agent
+### ( Option B ) - Install the Hermes Agent
 ### 5.B.1 Install Hermes
 *{info}*
 
