@@ -337,7 +337,7 @@ OhMyZsh:
 
 ##
 
-# Optinal Extras 
+# Optional Extras 
 
 ## Install Oh My Zsh - Shell Extension 
 Oh My Zsh simplifies the process of customizing your terminal by providing over 300 optional plugins for tools like Git and Docker, along with 150+ visual themes. Essentially, it transforms a plain command-line interface into a more powerful, user-friendly environment with features like advanced tab completion and syntax highlighting.
