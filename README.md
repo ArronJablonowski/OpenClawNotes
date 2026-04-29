@@ -106,7 +106,7 @@ brew services start ollama
 ```zsh
 mkdir ~/Applications && brew install --cask --appdir=~/Applications stats
 ```
-- *Open Stats in the GUI.* (command + spacebar > type: 'Stats')
+- **Open Stats in the GUI.** (command + spacebar > type: 'Stats')
 - Durring initial setup - tell Stats to "Start the application automatically when starting your Mac" 
 - Durring initial setup - Select "Do everything siliently in the background." 
 - Click on the (new) stats that appeared in Mac's top bar, and then click the Gear icon to access Stats Settings. 
@@ -123,7 +123,7 @@ mkdir ~/Applications && brew install --cask --appdir=~/Applications stats
 ```zsh
 brew install --cask macs-fan-control
 ```
-- *Open Mac Fan Control in the GUI.* (command + spacebar > type: 'Fan')
+- **Open Mac Fan Control in the GUI.** (command + spacebar > type: 'Fan')
 - Set Exhaust control to Custom > Select "Sensor-based value" > CPU Core Average
     - Set Temperature, that the fan speed will start to increse from to 50c
     - Set Maximum temperature to 75c. This will spin up the fan before the Mac starts getting too hot.
