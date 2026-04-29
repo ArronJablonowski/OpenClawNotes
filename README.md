@@ -293,7 +293,9 @@ To achieve a resilient SOC-Grade security posture, it is essential to implement 
 
    - Network Traffic Analysis (NTA): Utilize port mirroring (SPAN/TAP) to ingest raw traffic into a high-fidelity sensor. Implementing a Security Onion or Zeek instance allows for deep packet inspection and automated protocol analysis." 
 
-## . 💾 Disaster Recovery - *Backup and Restore*
+## 8. 💾 Disaster Recovery - *Backup and Restore*
+Both of these AI Agents *(Open Claw & Hermes)* are in beta and it is not uncommon for updates to break functionality. Due to this, it is important to have a robust Disaster Recovery plan in place. 
+
 *{info}* 
 
 ## 📜 Quick Reference 
