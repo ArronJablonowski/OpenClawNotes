@@ -222,9 +222,11 @@ lobster_user ALL=(ALL) NOPASSWD: /Users/lobster_user/.local/bin/uvx fluidtop
 ```zsh
 curl -fsSL https://openclaw.ai/install.sh | bash
 ```
-As you go through the installer script, keep gemma4 as default and enable 'command-logger' & 'session-memory'.
+As you go through the installer script:
+- Keep gemma4 as default
+- Enable 'command-logger' & 'session-memory'.
 
-### 5.A.2 🤖 Run an OpenClaw Security Audit
+### 5.A.2 🔒 Run an OpenClaw Security Audit
 Once the initial setup has completed, run a security audit. 
 ```zsh
 openclaw security audit --deep
@@ -273,6 +275,7 @@ Modify the allow and deny list as needed. Any binary not listed should prompt yo
 
 
 ## 6. 🧑‍💻 Log out of your LLM/AI User and log into your Admin User again
+Once the AI Agent has been installed and confirmed working, remove the LLM/AI User's Admin privileges. 
 - **Remove Admin/Sudo from the LLM/AI User:** Now that everything is installed and running properly under the LLM/AI user, we will revoke the user's admin/sudo access. 
 
   - Remove Admin (settings > Users & Groups > *click 'i' next to LLM/AI user's name* and toggle off the "allow this user to administer this computer")
