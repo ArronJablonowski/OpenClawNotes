@@ -217,7 +217,7 @@ lobster_user ALL=(ALL) NOPASSWD: /opt/homebrew/bin/asitop
 lobster_user ALL=(ALL) NOPASSWD: /Users/lobster_user/.local/bin/uvx fluidtop
 ```
 
-## 5 Install OpenClaw 🦞 
+## 5. Install OpenClaw 🦞 
 ```zsh
 curl -fsSL https://openclaw.ai/install.sh | bash
 ```
