@@ -217,7 +217,7 @@ lobster_user ALL=(ALL) NOPASSWD: /Users/lobster_user/.local/bin/uvx fluidtop
 ```
 
 ## 5. Install OpenClaw and/or Hermes 
-## - Option A - OpenClaw
+## - Option A - OpenClaw Agent
 ### 5.A.1 🦞 Install OpenClaw
 ```zsh
 curl -fsSL https://openclaw.ai/install.sh | bash
@@ -270,7 +270,7 @@ OpenClaw’s `exec` tool is a powerful vector. Restrict it to a "Default Deny" p
 ```
 Modify the allow and deny list as needed. Any binary not listed should prompt you before executing.
 
-## - Option B - Hermes
+## - Option B - Hermes Agent
 ### 5.B.1 Install Hermes
 *{info}*
 
