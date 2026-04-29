@@ -32,11 +32,11 @@ In both OpenClaw and Hermes, command injection isn't just a coding bug; it’s a
 ## 🧪 AI Agent Setup Recommendations for Securing a Locally Hosted AI Lab Environment 🧪
 
 ## 1. 📡 Network Segmentation & Isolation - 💣 *The Blast Radius Control*  💣
-Before proceeding, it is important to isolate the OpenClaw system from the rest of the LAN (local area network). This helps mitigate the threat of internal pivoting 
+Before proceeding, it is important to isolate the OpenClaw and/or Hermes system from the rest of the LAN (local area network). This helps mitigate the threat of internal pivoting 
 and contains potential adversarial activity within the isolated network segment.
 
 ### ( Option A ) - Network Segmentation the Proper Way - VLANs
-### 🛡️ Put the OpenClaw system on its own dedicated and isolated VLAN. 
+### 🛡️ Put the AI Agent System on its own dedicated and isolated VLAN. 
 By enforcing strict network segmentation, this configuration mitigates the threat of internal pivoting and contains potential adversarial activity within the isolated 
 network segment. 
 - **VLAN setup and creation is outside the scope of this guide.**
@@ -216,31 +216,15 @@ lobster_user ALL=(ALL) NOPASSWD: /opt/homebrew/bin/asitop
 lobster_user ALL=(ALL) NOPASSWD: /Users/lobster_user/.local/bin/uvx fluidtop
 ```
 
-## 5. Install OpenClaw 🦞 
+## 5. Install OpenClaw and/or Hermes 
+
+### 5.A.1 🦞 Install OpenClaw
 ```zsh
 curl -fsSL https://openclaw.ai/install.sh | bash
 ```
 As you go through the installer script, keep gemma4 as default and enable 'command-logger' & 'session-memory'.
 
-## 6. 🧑‍💻 Log out of your LLM/AI User and log into your Admin User again
-- **Remove Admin/Sudo from the LLM/AI User:** Now that everything is installed and running properly under the LLM/AI user, we will revoke the user's admin/sudo access. 
-
-  - Remove Admin (settings > Users & Groups > *click 'i' next to LLM/AI user's name* and toggle off the "allow this user to administer this computer")
-  - Reboot the system so these changes take effect.
-  - Verify the LLM/AI user no longer has Admin privileges. 
-
-## 7. 🤖 Login to LLM/AI User Account & Tell OpenClaw to Run a Security Audit
-```zsh
-openclaw security audit --deep
-```
-
-If you want to fix any issues that are found by the audit:
-```zsh
-openclaw security audit --fix 
-```
-
-
-### 8. 🔒 Hardening the OpenClaw Agent (Zero-Trust Deployment)
+### 5.A.2 🔒 Hardening the OpenClaw Agent (Zero-Trust Deployment)
 
 You must treat an autonomous agent as **untrusted code execution**. By default, OpenClaw has the same permissions as your `LLM/AI` user. If the agent is "prompt 
 injected" while reading a malicious file, email, or webpage, it could trick the system into running malicious commands and/or compromise the system. 
@@ -273,6 +257,29 @@ OpenClaw’s `exec` tool is a powerful vector. Restrict it to a "Default Deny" p
 }
 ```
 Modify the allow and deny list as needed. Any binary not listed should prompt you before executing.
+
+### 5.B.1 Install Hermes
+*{info}*
+
+
+## 6. 🧑‍💻 Log out of your LLM/AI User and log into your Admin User again
+- **Remove Admin/Sudo from the LLM/AI User:** Now that everything is installed and running properly under the LLM/AI user, we will revoke the user's admin/sudo access. 
+
+  - Remove Admin (settings > Users & Groups > *click 'i' next to LLM/AI user's name* and toggle off the "allow this user to administer this computer")
+  - Reboot the system so these changes take effect.
+  - Verify the LLM/AI user no longer has Admin privileges. 
+
+## 7. 🤖 Login to LLM/AI User Account & Tell OpenClaw to Run a Security Audit
+```zsh
+openclaw security audit --deep
+```
+
+If you want to fix any issues that are found by the audit:
+```zsh
+openclaw security audit --fix 
+```
+
+
 
 ## 9. 🧦 SOC-Grade Security Monitoring 
 To achieve a resilient SOC-Grade security posture, it is essential to implement comprehensive telemetry monitoring across both host and network layers. This dual-visibility framework provides the necessary context to identify early Indicators of Compromise (IoCs) and facilitates rapid incident containment.
