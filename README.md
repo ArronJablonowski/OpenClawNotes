@@ -119,7 +119,7 @@ mkdir ~/Applications && brew install --cask --appdir=~/Applications stats
     - Toggle on "Show icon in dock"
     - Toggle on **"Start at login"** if not already set. 
 
-## 4.4 Install Mac Fan Control *(if your Mac has a fan)*
+## 4.4 Install Mac Fan Control * - if your Mac has a fan*
 ```zsh
 brew install --cask macs-fan-control
 ```
