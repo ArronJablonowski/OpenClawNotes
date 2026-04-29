@@ -217,7 +217,7 @@ lobster_user ALL=(ALL) NOPASSWD: /Users/lobster_user/.local/bin/uvx fluidtop
 ```
 
 ## 5. Install OpenClaw and/or Hermes 
-## - Option A - OpenClaw Agent
+## ( Option A ) - Install the OpenClaw Agent
 ### 5.A.1 🦞 Install OpenClaw
 ```zsh
 curl -fsSL https://openclaw.ai/install.sh | bash
@@ -270,10 +270,13 @@ OpenClaw’s `exec` tool is a powerful vector. Restrict it to a "Default Deny" p
 ```
 Modify the allow and deny list as needed. Any binary not listed should prompt you before executing.
 
-## - Option B - Hermes Agent
+## ( Option B - Install the Hermes Agent
 ### 5.B.1 Install Hermes
 *{info}*
 
+## ( Option C - Install both the OpenClaw & Hermes Agents
+### 5.C.1 Install Both 
+*{info}*
 
 ## 6. 🧑‍💻 Log out of your LLM/AI User and log into your Admin User again
 Once the AI Agent has been installed and confirmed working, remove the LLM/AI User's Admin privileges. 
