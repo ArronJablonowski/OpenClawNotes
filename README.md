@@ -217,7 +217,8 @@ lobster_user ALL=(ALL) NOPASSWD: /Users/lobster_user/.local/bin/uvx fluidtop
 ```
 
 ## 5. Install OpenClaw and/or Hermes 
-
+## Option A
+##
 ### 5.A.1 🦞 Install OpenClaw
 ```zsh
 curl -fsSL https://openclaw.ai/install.sh | bash
