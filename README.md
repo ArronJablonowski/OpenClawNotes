@@ -116,7 +116,7 @@ mkdir ~/Applications && brew install --cask --appdir=~/Applications stats
     - Click 'GPU' > Ensure the top right toggle is on
     - Click 'RAM' > Ensure the top right toggle is on
     - Click 'Sensors' > Toggle "Hottest CPU" & "Hottest GPU" on
-- Click Gear icon in Settings Window (lower left)
+- Click Gear icon in Settings window (lower left)
     - Set Tempature to Celsius
     - Toggle on "Show icon in dock"
     - Toggle on **"Start at login"** if not already set. 
