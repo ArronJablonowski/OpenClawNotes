@@ -224,7 +224,16 @@ curl -fsSL https://openclaw.ai/install.sh | bash
 ```
 As you go through the installer script, keep gemma4 as default and enable 'command-logger' & 'session-memory'.
 
-### 5.A.2 🔒 Hardening the OpenClaw Agent (Zero-Trust Deployment)
+### 5.A.2 🤖 Run an OpenClaw Security Audit
+```zsh
+openclaw security audit --deep
+```
+- If you want to fix any issues that are found by the audit:
+```zsh
+openclaw security audit --fix 
+```
+
+### 5.A.3 🔒 Hardening the OpenClaw Agent (Zero-Trust Deployment)
 
 You must treat an autonomous agent as **untrusted code execution**. By default, OpenClaw has the same permissions as your `LLM/AI` user. If the agent is "prompt 
 injected" while reading a malicious file, email, or webpage, it could trick the system into running malicious commands and/or compromise the system. 
@@ -269,19 +278,11 @@ Modify the allow and deny list as needed. Any binary not listed should prompt yo
   - Reboot the system so these changes take effect.
   - Verify the LLM/AI user no longer has Admin privileges. 
 
-## 7. 🤖 Login to LLM/AI User Account & Tell OpenClaw to Run a Security Audit
-```zsh
-openclaw security audit --deep
-```
-
-If you want to fix any issues that are found by the audit:
-```zsh
-openclaw security audit --fix 
-```
 
 
 
-## 9. 🧦 SOC-Grade Security Monitoring 
+
+## 7. 🧦 SOC-Grade Security Monitoring 
 To achieve a resilient SOC-Grade security posture, it is essential to implement comprehensive telemetry monitoring across both host and network layers. This dual-visibility framework provides the necessary context to identify early Indicators of Compromise (IoCs) and facilitates rapid incident containment.
 
    - Endpoint Observability: Deploy enterprise-grade EDR and log-forwarding solutions—such as Wazuh *(free)* or Elastic Agent *(also free)* to capture granular process-level telemetry and system events.
