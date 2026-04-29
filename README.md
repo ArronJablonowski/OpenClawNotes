@@ -318,6 +318,9 @@ cat repomix-output.xml | ollama run qwen2.5-coder:7b "I have attached my reposit
 sub-modules."
 ```
 
+OpenClaw: 
+- [OpenClaw Documentation](https://docs.openclaw.ai/)
+
 OpenClaw Docs: 
 - [OpenClaw Gateway Security](https://docs.openclaw.ai/gateway/security)
 - [OpenClaw Gateway Remote](https://docs.openclaw.ai/gateway/remote)
@@ -325,9 +328,6 @@ OpenClaw Docs:
 
 OpenClaw FAQ: 
 - [OpenClaw Start FAQ](https://docs.openclaw.ai/start/faq)
-
-OpenClaw: 
-- [OpenClaw Documentation](https://docs.openclaw.ai/)
 
 ollama: 
 - [ollama.com](https://ollama.com/)
