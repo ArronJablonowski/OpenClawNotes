@@ -134,7 +134,7 @@ brew install --cask macs-fan-control
 
 ## 4.5 Pull Gemma4 / or another LLM to act as the "Brain" for OpenClaw 
 *Please note the LLM used should be compatible with the hardware you're running it on. If Gemma4 is not compatible, please choose a model that works for your hardware. Ask Gemini, etc. which model is best for your hardware if you're unsure.*
-- Pull gemma4 *(24GB+ or RAM is required)*
+- Pull gemma4 *(check ram requirements for each model)*
 ```zsh
 ollama pull gemma4
 ```
