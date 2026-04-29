@@ -225,6 +225,7 @@ curl -fsSL https://openclaw.ai/install.sh | bash
 As you go through the installer script, keep gemma4 as default and enable 'command-logger' & 'session-memory'.
 
 ### 5.A.2 🤖 Run an OpenClaw Security Audit
+Once the initial setup has completed, run a security audit. 
 ```zsh
 openclaw security audit --deep
 ```
