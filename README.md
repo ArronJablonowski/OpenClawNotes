@@ -109,7 +109,7 @@ mkdir ~/Applications && brew install --cask --appdir=~/Applications stats
 - *Open Stats in the GUI.* 
 - Tell Stats to "Start the application automatically when starting your Mac" 
 - Select "Do everything siliently in the background." 
-- Click the (new) Stats that appeared in Mac's top bar, and then click the Gear icon to access Stats' Settings. 
+- Click the (new) stats that appeared in Mac's top bar, and then click the Gear icon to access Stats Settings. 
     - Click CPU > Ensure the top right toggle is on 
     - Click GPU > Ensure the top right toggle is on
     - Click RAM > Ensure the top right toggle is on
