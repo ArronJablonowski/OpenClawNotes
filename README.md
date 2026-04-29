@@ -293,6 +293,9 @@ To achieve a resilient SOC-Grade security posture, it is essential to implement 
 
    - Network Traffic Analysis (NTA): Utilize port mirroring (SPAN/TAP) to ingest raw traffic into a high-fidelity sensor. Implementing a Security Onion or Zeek instance allows for deep packet inspection and automated protocol analysis." 
 
+## . 💾 Disaster Recovery - *Backup and Restore*
+*{info}* 
+
 ## 📜 Quick Reference 
 - Default OpenClaw Gateway: 127.0.0.1:18789 
 - Default ollama base URL: 127.0.0.1:11434
