@@ -270,6 +270,7 @@ OpenClaw’s `exec` tool is a powerful vector. Restrict it to a "Default Deny" p
 ```
 Modify the allow and deny list as needed. Any binary not listed should prompt you before executing.
 
+
 ### 5.B.1 Install Hermes
 *{info}*
 
@@ -283,20 +284,19 @@ Once the AI Agent has been installed and confirmed working, remove the LLM/AI Us
   - Verify the LLM/AI user no longer has Admin privileges. 
 
 
+## 7. 💾 Disaster Recovery - *Backup and Restore*
+Both of these AI Agents *(Open Claw & Hermes)* are in beta and it is not uncommon for updates to break functionality. Due to this, it is important to have a robust Disaster Recovery plan in place. 
+
+*{info}* 
 
 
 
-## 7. 👁️ SOC-Grade Security Monitoring 
+## 8. 👁️ SOC-Grade Security Monitoring 
 To achieve a resilient SOC-Grade security posture, it is essential to implement comprehensive telemetry monitoring across both host and network layers. This dual-visibility framework provides the necessary context to identify early Indicators of Compromise (IoCs) and facilitates rapid incident containment.
 
    - Endpoint Observability: Deploy enterprise-grade EDR and log-forwarding solutions—such as Wazuh *(free)* or Elastic Agent *(also free)* to capture granular process-level telemetry and system events.
 
    - Network Traffic Analysis (NTA): Utilize port mirroring (SPAN/TAP) to ingest raw traffic into a high-fidelity sensor. Implementing a Security Onion or Zeek instance allows for deep packet inspection and automated protocol analysis." 
-
-## 8. 💾 Disaster Recovery - *Backup and Restore*
-Both of these AI Agents *(Open Claw & Hermes)* are in beta and it is not uncommon for updates to break functionality. Due to this, it is important to have a robust Disaster Recovery plan in place. 
-
-*{info}* 
 
 ## 📜 Quick Reference 
 - Default OpenClaw Gateway: 127.0.0.1:18789 
