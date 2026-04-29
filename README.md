@@ -198,6 +198,7 @@ set-option -g allow-rename off
 ```
 
 ## 4.9 sudo visudo  
+Add commands your AI/LLM user can run as sudo, even after Admin privelges have been removed. 
 - vi editor commands cheat sheet: 
   - press 'i'              *enter insert mode*
   - press '{esc} : q!'     *quit vi, without writing changes to the file*
