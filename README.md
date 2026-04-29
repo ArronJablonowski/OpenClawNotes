@@ -131,7 +131,7 @@ brew install --cask macs-fan-control
     - Under 'General' > select all 3 options *(Autostart minimized..., Check for updates..., Show icon in dock)*
     - Under 'Menu bar display' > Set -- Icon:Monochrome, Fan:Exhaust, Sensor:CPU Core Average 
 
-## 4.5 Pull Gemma4 / or another LLM to act as the "Brain" for OpenClaw 
+## 4.5 Pull Gemma4 or another LLM to act as the "Brain" for the AI Agent 
 *Please note the LLM used should be compatible with the hardware you're running it on. If Gemma4 is not compatible, please choose a model that works for your hardware. Ask Gemini, etc. which model is best for your hardware if you're unsure.*
 - Pull gemma4 *(check ram requirements for each model)*
 ```zsh
