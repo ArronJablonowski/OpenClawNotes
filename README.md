@@ -2,35 +2,34 @@
 
 🚧 🚧 🚧 Under Construction 🚧 🚧 🚧*in beta* 
  
-This document provides a guide for setting up a dedicated, locally hosted, and security-hardened installation of OpenClaw on Apple Silicon hardware. 
+This document provides a guide for setting up a dedicated, locally hosted, and security-hardened installation of AI Agents on Apple Silicon hardware. 
 
  🎯 The Objective - I developed this guide for two primary reasons:
-- First, to personally explore OpenClaw as an AI Agent, and experiment with it's security, given its reputation as a "high-risk", inherently difficult to secure autonomous AI agent.  
-- Second, during my research into OpenClaw, I noted the prevalence of poor and generic security advice lacking depth. Consequently, I aimed to create a hands-on hardening guide that promotes higher security standards and implements security best practices to address common vulnerabilities and conceptual misunderstandings related to security.
+- First, to personally explore OpenClaw and Hermes as AI Agents, and experiment with their security, given their reputations as a "high-risk", inherently difficult to secure autonomous AI agents.  
+- Second, during my research into OpenClaw and Hermes, I noted the prevalence of poor and generic security advice lacking depth. Consequently, I aimed to create a hands-on hardening guide that promotes higher security standards and implements security best practices to address common vulnerabilities and conceptual misunderstandings related to security.
 
 ##
 
 # 🚨 The Security Risks 🚨
-***🛑 PRIMARY WARNING:*** If the OpenClaw system is compromised, **all data on that system should also be considered compromised, unless you have evidence/logs that prove otherwise.** This includes local files, passwords, API keys, Keychains, etc. **DO NOT store sensitive data on the OpenClaw system, and DO NOT use your daily driver Mac to run OpenClaw.**
+***🛑 PRIMARY WARNING:*** If the AI Agent's system is compromised, **all data on that system should also be considered compromised, unless you have evidence/logs that prove otherwise.** This includes local files, passwords, API keys, Keychains, etc. **DO NOT store sensitive data on the OpenClaw or Hermes systems, and DO NOT use your daily driver Mac to run OpenClaw or Hermes.**
 
 ### ⚠️ Supply Chain Vulnerabilities
-The biggest immediate risk to your OpenClaw is the supply chain. Since OpenClaw relies on community developed `skills` and `npm` packages, a compromised `skill` or `npm` dependency could unknowingly infect your system through malicious package updates. *(like the Axios compromise of early 2026)*
-
+The biggest immediate risk to your OpenClaw or Hermes system is the supply chain. Since both agents rely on community developed `skills` and/or `npm` packages, a compromised `skill` or `npm` dependency could unknowingly infect your system through malicious package updates. *(like the Axios compromise of early 2026)*
 
 ### ⚠️ Command Injection Vulnerabilities 
-In OpenClaw, command injection isn't just a coding bug; it’s an architectural risk known as the Lethal Trifecta. 
- - **Access to Untrusted Content:** The agent can read emails, browse the web, or monitor messaging apps.
- - **Autonomous Tool Use:** The agent has a "Skill" to run shell commands (bash, zsh, terminal).
- - **Persistence:** The agent maintains a long-term memory and can run commands and crons (scheduled tasks) in the background.
+In both OpenClaw and Hermes, command injection isn't just a coding bug; it’s an architectural risk known as the Lethal Trifecta. 
+ - **Access to Untrusted Content:** The agents can read emails, browse the web, or monitor messaging apps.
+ - **Autonomous Tool Use:** The agents have "Skills" to run shell commands (bash, zsh, terminal).
+ - **Persistence:** The agents maintain a long-term memory and can run commands and crons (scheduled tasks) in the background.
 
 **🔑 SECRETS WARNING:** OpenClaw stores API tokens and session keys in plaintext within `~/.openclaw/credentials/`. Never include these in your Git commits or share your `SOUL.md` file if it contains sensitive environmental details.
 
-**🕸️ Potential Spread:** Without proper network segmentation, a compromised OpenClaw instance may be leveraged as a pivot point for unauthorized access to other internal network devices and network-attached storage.
+**🕸️ Potential Spread:** Without proper network segmentation, a compromised AI Agent or it's system may be leveraged as a pivot point for unauthorized access to other internal network devices and network-attached storage.
 
 </br>
 </br>
 
-## 🧪 OpenClaw Setup Recommendations for Securing a Locally Hosted AI Lab Environment 🧪
+## 🧪 AI Agent Setup Recommendations for Securing a Locally Hosted AI Lab Environment 🧪
 
 ## 1. 📡 Network Segmentation & Isolation - 💣 *The Blast Radius Control*  💣
 Before proceeding, it is important to isolate the OpenClaw system from the rest of the LAN (local area network). This helps mitigate the threat of internal pivoting 
