@@ -217,20 +217,20 @@ lobster_user ALL=(ALL) NOPASSWD: /opt/homebrew/bin/asitop
 lobster_user ALL=(ALL) NOPASSWD: /Users/lobster_user/.local/bin/uvx fluidtop
 ```
 
-## 4.10 Install OpenClaw 🦞 
+## 5 Install OpenClaw 🦞 
 ```zsh
 curl -fsSL https://openclaw.ai/install.sh | bash
 ```
 As you go through the installer script, keep gemma4 as default and enable 'command-logger' & 'session-memory'.
 
-## 5. 🧑‍💻 Log out of your LLM/AI User and log into your Admin User again
+## 6. 🧑‍💻 Log out of your LLM/AI User and log into your Admin User again
 - **Remove Admin/Sudo from the LLM/AI User:** Now that everything is installed and running properly under the LLM/AI user, we will revoke the user's admin/sudo access. 
 
   - Remove Admin (settings > Users & Groups > *click 'i' next to LLM/AI user's name* and toggle off the "allow this user to administer this computer")
   - Reboot the system so these changes take effect.
   - Verify the LLM/AI user no longer has Admin privileges. 
 
-## 6. 🤖 Login to LLM/AI User Account & Tell OpenClaw to Run a Security Audit
+## 7. 🤖 Login to LLM/AI User Account & Tell OpenClaw to Run a Security Audit
 ```zsh
 openclaw security audit --deep
 ```
@@ -241,7 +241,7 @@ openclaw security audit --fix
 ```
 
 
-### 7. 🔒 Hardening the OpenClaw Agent (Zero-Trust Deployment)
+### 8. 🔒 Hardening the OpenClaw Agent (Zero-Trust Deployment)
 
 You must treat an autonomous agent as **untrusted code execution**. By default, OpenClaw has the same permissions as your `LLM/AI` user. If the agent is "prompt 
 injected" while reading a malicious file, email, or webpage, it could trick the system into running malicious commands and/or compromise the system. 
@@ -275,7 +275,7 @@ OpenClaw’s `exec` tool is a powerful vector. Restrict it to a "Default Deny" p
 ```
 Modify the allow and deny list as needed. Any binary not listed should prompt you before executing.
 
-## 8. 🧦 SOC-Grade Security Monitoring 
+## 9. 🧦 SOC-Grade Security Monitoring 
 To achieve a resilient SOC-Grade security posture, it is essential to implement comprehensive telemetry monitoring across both host and network layers. This dual-visibility framework provides the necessary context to identify early Indicators of Compromise (IoCs) and facilitates rapid incident containment.
 
    - Endpoint Observability: Deploy enterprise-grade EDR and log-forwarding solutions—such as Wazuh *(free)* or Elastic Agent *(also free)* to capture granular process-level telemetry and system events.
