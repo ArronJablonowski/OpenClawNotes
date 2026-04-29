@@ -286,7 +286,7 @@ Once the AI Agent has been installed and confirmed working, remove the LLM/AI Us
 
 
 
-## 7. 🧦 SOC-Grade Security Monitoring 👁️
+## 7. 👁️ SOC-Grade Security Monitoring 
 To achieve a resilient SOC-Grade security posture, it is essential to implement comprehensive telemetry monitoring across both host and network layers. This dual-visibility framework provides the necessary context to identify early Indicators of Compromise (IoCs) and facilitates rapid incident containment.
 
    - Endpoint Observability: Deploy enterprise-grade EDR and log-forwarding solutions—such as Wazuh *(free)* or Elastic Agent *(also free)* to capture granular process-level telemetry and system events.
