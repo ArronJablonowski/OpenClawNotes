@@ -272,11 +272,19 @@ Modify the allow and deny list as needed. Any binary not listed should prompt yo
 
 ### ( Option B ) - Install the Hermes Agent
 ### 5.B.1 Install Hermes
-*{info}*
+```zsh
+curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+```
+After installing:
+```zsh
+source ~/.bashrc   # or: source ~/.zshrc
+hermes             # Start chatting!
+```
 
 ### ( Option C ) - Install both the OpenClaw & Hermes Agents
 ### 5.C.1 Install Both 
 *{info}*
+
 
 ## 6. 🧑‍💻 Log out of your LLM/AI User and log into your Admin User again
 Once the AI Agent has been installed and confirmed working, remove the LLM/AI User's Admin privileges. 
