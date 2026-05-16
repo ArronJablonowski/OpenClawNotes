@@ -275,7 +275,7 @@ curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scri
 ```
 After installing:
 ```zsh
-source ~/.bashrc   # or: source ~/.zshrc
+source ~/.zshrc   # or: source ~/.bashrc
 hermes             # Start chatting!
 ```
 
