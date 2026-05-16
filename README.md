@@ -282,7 +282,7 @@ source ~/.bashrc   # or: source ~/.zshrc
 hermes             # Start chatting!
 ```
 
-### ( Option C ) - Install both the OpenClaw & Hermes Agents
+### ( Option C ) - Install both OpenClaw & Hermes Agents
 ### 5.C.1 Install Both 
 *{info}*
 
