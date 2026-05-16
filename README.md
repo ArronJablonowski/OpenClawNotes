@@ -18,7 +18,7 @@ The biggest immediate risk to your OpenClaw or Hermes system is the supply chain
 In both OpenClaw and Hermes, command injection isn't just a coding bug; it’s an architectural risk known as the [Lethal Trifecta](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/). 
  - **Access to Untrusted Content:** These agents can read emails, browse the web, or monitor messaging apps. The content could have malicious commands that your agents read and take action on. 
  - **Privileged Access:** These agents have access to sensitive information, such as API keys, private emails, password vaults, etc. 
- - **External Action Capability:** These agents maintain a long-term memory and can run commands and crons (scheduled tasks) in the background. Some examples capabilities include sending emails, deleting files, executing code, deploy software, etc. 
+ - **External Action Capability:** These agents maintain a long-term memory and can run commands and crons (scheduled tasks) in the background. Some example capabilities include sending emails, deleting files, executing code, deploy software, etc. 
  - *The Command Injection / Promopt Injection risk can be reduced by using more inteligent LLM's. However the risk still exists, even with the most advanced LLMs.* 
 
 **🔑 SECRETS WARNING:** OpenClaw stores API tokens and session keys in plaintext within `~/.openclaw/credentials/`. Never include these in your Git commits or share your `SOUL.md` file if it contains sensitive environmental details.
