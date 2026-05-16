@@ -165,7 +165,8 @@ source ~/.zshrc
 ```
 
 ## 4.7 Harden ssh to only allow keypair auth 
-Ensure you've already setup keypairs for both users. 
+Setup keypairs for your LLM/Ai user, for authentication over ssh. 
+*Ensure you've already setup keypairs for both users (admin & LLM/AI users) before you continue.* 
 ```zsh
 sudo nano /etc/ssh/sshd_config.d/00-disable-passwords.conf
 ```
