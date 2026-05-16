@@ -17,7 +17,7 @@ This document provides a guide for setting up a dedicated, locally hosted, and s
 The biggest immediate risk to your OpenClaw or Hermes system is the supply chain. Since both agents rely on `npm` packages, a compromised `npm` dependency could unknowingly infect your system through malicious package updates. *(like the Axios compromise of early 2026)* Additionally OpenClaw uses community devoloped `skills`, and a large number of these skills have been found to be malicious. 
 
 ### ⚠️ Command Injection / Promopt Injection Vulnerabilities 
-In both OpenClaw and Hermes, command injection isn't just a coding bug; it’s an architectural risk known as the Lethal Trifecta. 
+In both OpenClaw and Hermes, command injection isn't just a coding bug; it’s an architectural risk known as the [Lethal Trifecta](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/). 
  - **Access to Untrusted Content:** These agents can read emails, browse the web, or monitor messaging apps. The content could have malicious commands that your agents read and take action on. 
  - **Privileged Access:** These agents have access to sensitive information, such as API keys, private emails, password vaults, etc. 
  - **External Action Capability:** These agents maintain a long-term memory and can run commands and crons (scheduled tasks) in the background. Some examples capabilities include sending emails, deleting files, executing code, deploy software, etc. 
