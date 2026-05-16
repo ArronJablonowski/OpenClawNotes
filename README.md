@@ -1,6 +1,4 @@
 # 🧬 AI Lab Setup & Hardening Guide for AI Agents on Apple Silicon 🧬
-
-🚧 🚧 🚧 Under Construction 🚧 🚧 🚧*in beta* 
  
 This document provides a guide for setting up a dedicated, locally hosted, and security-hardened installation of AI Agents, such as OpenClaw and Hermes on Apple Silicon hardware. 
 
