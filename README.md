@@ -35,7 +35,7 @@ Before proceeding, it is important to isolate the OpenClaw and/or Hermes system 
 and contains potential adversarial activity within the isolated network segment.
 
 ### ( Option A ) - Network Segmentation the Proper Way - VLANs
-### 🛡️ Put the AI Agent System on its own dedicated and isolated VLAN. 
+### 🛡️ Put the AI Agent's System on its own dedicated and isolated VLAN. 
 By enforcing strict network segmentation, this configuration mitigates the threat of internal pivoting and contains potential adversarial activity within the isolated 
 network segment. 
 - **VLAN setup and creation is outside the scope of this guide.**
