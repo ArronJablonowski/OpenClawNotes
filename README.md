@@ -14,7 +14,7 @@ This document provides a guide for setting up a dedicated, locally hosted, and s
 ***🛑 PRIMARY WARNING:*** If the AI Agent's system is compromised, **all data on that system should also be considered compromised, unless you have evidence/logs that prove otherwise.** This includes local files, passwords, API keys, Keychains, etc. **DO NOT store sensitive data on the OpenClaw or Hermes systems, and DO NOT use your daily driver Mac to run OpenClaw or Hermes.**
 
 ### ⚠️ Supply Chain Vulnerabilities
-The biggest immediate risk to your OpenClaw or Hermes system is the supply chain. Since both agents rely on community developed `skills` and/or `npm` packages, a compromised `skill` or `npm` dependency could unknowingly infect your system through malicious package updates. *(like the Axios compromise of early 2026)*
+The biggest immediate risk to your OpenClaw or Hermes system is the supply chain. Since both agents rely on `npm` packages, a compromised `npm` dependency could unknowingly infect your system through malicious package updates. *(like the Axios compromise of early 2026)* Additionally OpenClaw uses community devoloped `skills`, and a large number of these skills have been found to be malicious. 
 
 ### ⚠️ Command Injection Vulnerabilities 
 In both OpenClaw and Hermes, command injection isn't just a coding bug; it’s an architectural risk known as the Lethal Trifecta. 
