@@ -222,7 +222,7 @@ lobster_user ALL=(ALL) NOPASSWD: /Users/lobster_user/.local/bin/uvx fluidtop
 curl -fsSL https://openclaw.ai/install.sh | bash
 ```
 Durring the initial setup *(openclaw onboard)*:
-- Keep gemma4 as default
+- Keep gemma4 as default, assuming gemma4 is compatable with your hardware. *Change LLM model to match your hardware as needed.* 
 - Enable 'command-logger' & 'session-memory'.
 
 ### 5.A.2 🔒 Run an OpenClaw Security Audit
