@@ -40,7 +40,6 @@ By enforcing strict network segmentation, this configuration mitigates the threa
 network segment. 
 - **VLAN setup and creation is outside the scope of this guide.**
   - The implementation of Virtual LANs (VLANs) typically requires dedicated, prosumer-grade firewall hardware, such as those offered by UniFi or pfSense/Netgate, due to the complex Layer 2 and Layer 3 traffic management involved.
-- **Isolation via Docker is not recommended as docker will cause a performance hit to the LLMs. (~10-20% slower)**
 
 ##
 
@@ -440,3 +439,4 @@ pnpm remove -g openclaw
 rm -rf ~/.openclaw
 rm -f ~/Library/LaunchAgents/ai.openclaw.gateway.plist
 ```
+ 
