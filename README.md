@@ -345,6 +345,11 @@ cat repomix-output.xml | ollama run qwen2.5-coder:7b "I have attached my reposit
 sub-modules."
 ```
 
+ollama: 
+- [ollama.com](https://ollama.com/)
+
+##
+
 OpenClaw: 
 - [OpenClaw Documentation](https://docs.openclaw.ai/)
 
@@ -356,8 +361,10 @@ OpenClaw Docs:
 OpenClaw FAQ: 
 - [OpenClaw Start FAQ](https://docs.openclaw.ai/start/faq)
 
-ollama: 
-- [ollama.com](https://ollama.com/)
+##
+
+Hermes: 
+- [Hermes Quick Start Guide](https://hermes-agent.nousresearch.com/docs/getting-started/quickstart)
 
 OhMyZsh: 
 - [ohmyz.sh](https://ohmyz.sh/)
